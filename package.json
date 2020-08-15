@@ -1,0 +1,39 @@
+{
+  "name": "merkwood",
+  "version": "0.0.1",
+  "description": "Ethereum data structure visualizations ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "asbuild:untouched": "asc assembly/index.as.ts --target debug",
+    "asbuild:optimized": "asc assembly/index.as.ts --target release",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
+    "asbuild:watch": "onchange -i 'assembly/**/*' -- npm run asbuild",
+    "build": "asc assembly/index.as.ts -b build/merkwood.wasm -t build/merkwood.wat --runtime half",
+    "start": "wasmtime --dir . build/merkwood.wasm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/dmj16/merkwood"
+  },
+  "keywords": [
+    "assemblyscript",
+    "webassembly",
+    "ethereum",
+    "merkle"
+  ],
+  "author": "david josephs",
+  "license": "ISC",
+  "dependencies": {
+    "@assemblyscript/loader": "^0.14.8",
+    "@guildofweavers/merkle": "^0.3.12",
+    "as-bignum": "^0.2.3",
+    "as-bind": "^0.4.0",
+    "as-wasi": "^0.2.0"
+  },
+  "devDependencies": {
+    "@assemblyscript/node": "github:AssemblyScript/node",
+    "@types/node": "^14.0.27",
+    "onchange": "^7.0.2"
+  }
+}
