@@ -26,13 +26,21 @@ describe("BinarySearchTree", () => {
   it("traverses tree using BFS", () => {
     expect(tree.BFS()).toStrictEqual([100, 1, 600, 20, 300, 5]);
   });
+
   it("traverses tree using DFSPreOrder", () => {
     expect(tree.DFSPreOrder()).toStrictEqual([100, 1, 20, 5, 600, 300]);
   });
+
   it("traverses tree using DFSInOrder", () => {
     expect(tree.DFSInOrder()).toStrictEqual([1, 5, 20, 100, 300, 600]);
   });
+
   it("traverses tree using DFSPostOrder", () => {
     expect(tree.DFSPostOrder()).toStrictEqual([5, 20, 1, 300, 600, 100]);
+  });
+
+  it("inverts all values in the tree", () => {
+    tree.invert(tree.root);
+    expect(tree.BFS()).toStrictEqual([100, 600, 1, 300, 20, 5]);
   });
 });

@@ -1,25 +1,26 @@
 {
-  "name": "merkwood",
+  "name": "algoAS",
   "version": "0.0.1",
-  "description": "Ethereum data structure visualizations ",
-  "main": "index.js",
+  "description": "Practice algorithms and data structures in AssemblyScript.",
+  "main": "index.ts",
   "scripts": {
     "test": "asp --verbose",
     "asbuild:untouched": "asc assembly/index.as.ts --target debug",
     "asbuild:optimized": "asc assembly/index.as.ts --target release",
     "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
-    "asbuild:wasi": "asc assembly/index.as.ts -b build/merkwood.wasm -t build/merkwood.wat --runtime half",
-    "wasmtime": "wasmtime --dir . build/merkwood.wasm",
+    "asbuild:wasi": "asc assembly/index.as.ts -b build/algoAS.wasm -t build/algoAS.wat --runtime half",
+    "wasmtime": "wasmtime --dir . build/algoAS.wasm",
     "start": "npm run asbuild:wasi && npm run wasmtime",
     "asbuild:watch": "onchange -i 'assembly/**/*' -- npm run start"
   },
   "repository": {
     "type": "git",
-    "url": "https://www.github.com/dmj16/merkwood"
+    "url": "https://www.github.com/dmj16/algoAS"
   },
   "keywords": [
     "assemblyscript",
     "webassembly",
+    "WASI",
     "algorithms",
     "data structures"
   ],

@@ -74,6 +74,15 @@ export class BST {
     return data;
   }
 
+  invert(node: TreeNode | null): void {
+    if (node === null) return;
+    const left = node.left;
+    node.left = node.right;
+    node.right = left;
+    this.invert(node.left);
+    this.invert(node.right);
+  }
+
   traversePre(node: TreeNode, result: Array<i32>): void {
     const left = node.left;
     const right = node.right;
