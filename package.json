@@ -1,7 +1,7 @@
 {
   "name": "algoAS",
   "version": "0.0.1",
-  "description": "Practice algorithms and data structures in AssemblyScript.",
+  "description": "Algorithms, data structures, and general computer science problems in AssemblyScript.",
   "main": "index.ts",
   "scripts": {
     "test": "asp --verbose",
@@ -9,8 +9,8 @@
     "asbuild:optimized": "asc assembly/index.as.ts --target release",
     "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
     "asbuild:wasi": "asc assembly/index.as.ts -b build/algoAS.wasm -t build/algoAS.wat --runtime half",
-    "wasmtime": "wasmtime --dir . build/algoAS.wasm",
-    "start": "npm run asbuild:wasi && npm run wasmtime",
+    "asbuild:wasmtime": "wasmtime --dir . build/algoAS.wasm",
+    "wasi": "npm run asbuild:wasi && npm run asbuild:wasmtime",
     "asbuild:watch": "onchange -i 'assembly/**/*' -- npm run start"
   },
   "repository": {
