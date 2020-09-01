@@ -50,10 +50,10 @@ export class BST {
     return false;
   }
 
-  BFS(): Array<i32> | null {
+  BFS(): i32[] | null {
     let currentNode = this.root;
     if (!currentNode) return null;
-    let data: Array<i32> = [];
+    let data: i32[] = [];
     let queue: TreeNode[] = [];
 
     let left: TreeNode | null;
@@ -83,48 +83,55 @@ export class BST {
     this.invert(node.right);
   }
 
-  traversePre(node: TreeNode, result: Array<i32>): void {
-    const left = node.left;
-    const right = node.right;
-    result.push(node.val);
-    if (left) this.traversePre(left, result);
-    if (right) this.traversePre(right, result);
-  }
-
-  DFSPreOrder(): Array<i32> | null {
-    if (!this.root) return null;
-    let result: Array<i32> = [];
-    this.traversePre(this.root as TreeNode, result);
+  DFSPreOrder(): i32[] | null {
+    let currentNode = this.root;
+    if (!currentNode) return null;
+    const stack: TreeNode[] = [];
+    const result: i32[] = [];
+    stack.push(currentNode);
+    while (stack.length > 0) {
+      currentNode = stack.pop();
+      result.push(currentNode.val);
+      const right = currentNode.right;
+      const left = currentNode.left;
+      if (right) stack.push(right);
+      if (left) stack.push(left);
+    }
     return result;
   }
 
-  traverseInOrd(node: TreeNode, result: Array<i32>): void {
-    const left = node.left;
-    const right = node.right;
-    if (left) this.traverseInOrd(left, result);
-    result.push(node.val);
-    if (right) this.traverseInOrd(right, result);
-  }
-
-  DFSInOrder(): Array<i32> | null {
-    if (!this.root) return null;
-    let result: Array<i32> = [];
-    this.traverseInOrd(this.root as TreeNode, result);
+  DFSInOrder(): i32[] | null {
+    let currentNode = this.root;
+    if (!currentNode) return null;
+    const stack: TreeNode[] = [];
+    const result: i32[] = [];
+    while (stack.length !== 0 || currentNode !== null) {
+      if (currentNode !== null) {
+        stack.push(currentNode);
+        currentNode = currentNode.left;
+      } else {
+        currentNode = stack.pop();
+        result.push(currentNode.val);
+        currentNode = currentNode.right;
+      }
+    }
     return result;
   }
 
-  traversePost(node: TreeNode, result: Array<i32>): void {
-    const left = node.left;
-    const right = node.right;
-    if (left) this.traversePost(left, result);
-    if (right) this.traversePost(right, result);
-    result.push(node.val);
-  }
-
-  DFSPostOrder(): Array<i32> | null {
-    if (!this.root) return null;
-    let result: Array<i32> = [];
-    this.traversePost(this.root as TreeNode, result);
+  DFSPostOrder(): i32[] | null {
+    let currentNode = this.root;
+    if (!currentNode) return null;
+    const stack: TreeNode[] = [];
+    const result: i32[] = [];
+    stack.push(currentNode);
+    while (stack.length !== 0) {
+      currentNode = stack.pop();
+      result.unshift(currentNode.val);
+      const left = currentNode.left;
+      const right = currentNode.right;
+      if (left) stack.push(left);
+      if (right) stack.push(right);
+    }
     return result;
   }
 }

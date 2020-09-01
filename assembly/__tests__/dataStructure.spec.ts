@@ -1,18 +1,53 @@
-import { BST } from "../dataStructures";
+import { BST, LinkedList, ListNode } from "../dataStructures";
+
+const list: LinkedList<i32> = new LinkedList<i32>();
+describe("LinkedList", () => {
+  test("push, insert and get new nodes", () => {
+    list.push(6);
+    list.push(36);
+    list.insert(2, 30);
+    list.push(100);
+    expect(list.len).toBe(4);
+    expect((list.head as ListNode<i32>).val).toBe(6);
+    expect((list.tail as ListNode<i32>).val).toBe(100);
+    expect((list.get(1) as ListNode<i32>).val).toBe(36);
+    expect((list.get(2) as ListNode<i32>).val).toBe(30);
+  });
+
+  test("remove and pop nodes", () => {
+    const removedNode = list.remove(1);
+    expect((removedNode as ListNode<i32>).val).toBe(36);
+    expect((removedNode as ListNode<i32>).next).toBe(null);
+    const poppedNode = list.pop();
+    expect((poppedNode as ListNode<i32>).val).toBe(100);
+    expect(list.len).toBe(2);
+    list.push(100);
+  });
+
+  test("unshift nodes", () => {
+    list.unshift(50000);
+    expect(list.len).toBe(4);
+    expect((list.head as ListNode<i32>).val).toBe(50000);
+  });
+
+  test("reverse list and shift nodes", () => {
+    list.reverse();
+    expect((list.shift() as ListNode<i32>).val).toBe(100);
+    expect((list.shift() as ListNode<i32>).val).toBe(30);
+    expect((list.shift() as ListNode<i32>).val).toBe(6);
+    expect((list.shift() as ListNode<i32>).val).toBe(50000);
+  });
+});
 
 const tree: BST = new BST();
-
 describe("BinarySearchTree", () => {
-  beforeEach(() => {
+  test("insert nodes and find by search", () => {
     tree.insert(100);
     tree.insert(1);
     tree.insert(600);
     tree.insert(300);
     tree.insert(20);
     tree.insert(5);
-  });
-
-  it("inserts nodes", () => {
     expect(tree.search(100)).toBe(true);
     expect(tree.search(1)).toBe(true);
     expect(tree.search(600)).toBe(true);
@@ -23,23 +58,23 @@ describe("BinarySearchTree", () => {
     expect(tree.search(0)).toBe(false);
   });
 
-  it("traverses tree using BFS", () => {
+  test("BFS traversal", () => {
     expect(tree.BFS()).toStrictEqual([100, 1, 600, 20, 300, 5]);
   });
 
-  it("traverses tree using DFSPreOrder", () => {
+  test("DFS PreOrder traversal", () => {
     expect(tree.DFSPreOrder()).toStrictEqual([100, 1, 20, 5, 600, 300]);
   });
 
-  it("traverses tree using DFSInOrder", () => {
+  test("DFS InOrder traversal", () => {
     expect(tree.DFSInOrder()).toStrictEqual([1, 5, 20, 100, 300, 600]);
   });
 
-  it("traverses tree using DFSPostOrder", () => {
+  test("DFS PostOrder traversal", () => {
     expect(tree.DFSPostOrder()).toStrictEqual([5, 20, 1, 300, 600, 100]);
   });
 
-  it("inverts all values in the tree", () => {
+  test("invert BST", () => {
     tree.invert(tree.root);
     expect(tree.BFS()).toStrictEqual([100, 600, 1, 300, 20, 5]);
   });

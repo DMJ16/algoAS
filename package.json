@@ -10,7 +10,7 @@
     "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
     "asbuild:wasi": "asc assembly/index.as.ts -b build/algoAS.wasm -t build/algoAS.wat --runtime half",
     "asbuild:wasmtime": "wasmtime --dir . build/algoAS.wasm",
-    "wasi": "npm run asbuild:wasi && npm run asbuild:wasmtime",
+    "wasmtime": "npm run asbuild:wasi && npm run asbuild:wasmtime",
     "asbuild:watch": "onchange -i 'assembly/**/*' -- npm run start"
   },
   "repository": {
@@ -32,7 +32,8 @@
     "as-bignum": "^0.2.3",
     "as-bind": "^0.4.0",
     "as-wasi": "^0.2.0",
-    "assemblyscript": "^0.14.8"
+    "assemblyscript": "^0.14.8",
+    "assemblyscript-closures-beta": "^0.10.2"
   },
   "devDependencies": {
     "@as-pect/cli": "^4.0.0",
