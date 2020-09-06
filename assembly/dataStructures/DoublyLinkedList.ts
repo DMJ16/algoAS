@@ -34,8 +34,11 @@ export class DoublyLinkedList<T> {
   pop(): ListNode<T> | null {
     if (!this.head) return null;
     const poppedNode = this.tail;
+    let tail: ListNode<T>;
     if (poppedNode !== null) {
       this.tail = poppedNode.prev;
+      const tail = this.tail;
+      if (tail) tail.next = null;
       poppedNode.prev = null;
     }
     if (this.length === 1) this.head = null;

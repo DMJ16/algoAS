@@ -1,14 +1,11 @@
 import {
-  binarySearch,
-  kmpSearch,
-  kadanesAlgo,
   bubbleSort,
   insertionSort,
   selectionSort,
   quickSort,
   mergeSort,
   radixSort,
-} from "../algorithms";
+} from "../../sorting";
 
 describe("sorting algorithms", () => {
   test("bubbleSort", () => {
@@ -118,29 +115,4 @@ describe("sorting algorithms", () => {
       23,
     ]);
   });
-});
-
-describe("search algorithms", () => {
-  test("KnuthMorrisPratt algorithm", () => {
-    expect(kmpSearch("hannahhahhahahahhahahahannah", "hannah")).toBe(2);
-    expect(kmpSearch("hannahhahhahahahhahahahannah", "dsds")).toBe(0);
-    expect(kmpSearch("hannahhahhahahahhahahahannah", "ha")).toBe(9);
-    expect(kmpSearch("hannahhahhahahah hahah     ahannah", "hannah")).toBe(2);
-  });
-
-  test("binarySearch", () => {
-    expect(binarySearch([1, 2, 58, 99, 100], 100)).toBe(4);
-    expect(binarySearch([1, 2, 5, 99, 10], 5)).toBe(2);
-    expect(binarySearch([2, 5, 6, 9, 13, 15, 28, 30], 13)).toBe(4);
-    expect(binarySearch([2, 5, 6, 9, 13, 15, 28, 30], 1000)).toBe(-1);
-    expect(binarySearch([2, 5, 6, 9, 13, 15, 28, 30], 50)).toBe(-1);
-  });
-});
-
-test("Kadane's algorithm", () => {
-  expect(
-    kadanesAlgo([3, 5, -9, 1, 3, -2, 3, 4, 7, 2, -9, 6, 3, 1, -5, 4])
-  ).toBe(19);
-
-  expect(kadanesAlgo([-10, -2, -9, -4, -8, -6, -7, -1, -3, -5])).toBe(-1);
 });
