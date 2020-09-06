@@ -1,4 +1,4 @@
-import { kadanesAlgo } from "../arrays";
+import { kadanesAlgo } from "../../arrays";
 
 describe("array algorithms", () => {
   test("Kadane's algorithm", () => {

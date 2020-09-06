@@ -1,4 +1,4 @@
-import { fib, factorial } from "../math";
+import { fib, factorial } from "../../math";
 
 describe("math algorithms", () => {
   test("factorials", () => {
