@@ -1,4 +1,4 @@
-# algo-as 🚀
+# as-algo 🚀
 
 ### Summary 📖
 
