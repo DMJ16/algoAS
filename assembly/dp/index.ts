@@ -1,1 +1,1 @@
-export { levenshteinDist } from "./levenshteinDist";
+export { levenshteinDistance } from "./levenshteinDistance";
