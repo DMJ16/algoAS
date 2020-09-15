@@ -1,3 +1,4 @@
+import { kadanesAlgo } from "../arrays";
 import {
   BST,
   DoublyLinkedList,
@@ -9,7 +10,28 @@ import {
   PriorityQueue,
   Queue,
   Stack,
-} from "../../dataStructures";
+} from "../dataStructures";
+import { levenshteinDistance } from "../dp";
+import { fib, factorial, fibExp } from "../math";
+import { binarySearch, kmpSearch } from "../search";
+import {
+  bubbleSort,
+  insertionSort,
+  selectionSort,
+  quickSort,
+  mergeSort,
+  radixSort,
+} from "../sorting";
+
+describe("array algorithms", () => {
+  test("Kadane's algorithm", () => {
+    expect(
+      kadanesAlgo([3, 5, -9, 1, 3, -2, 3, 4, 7, 2, -9, 6, 3, 1, -5, 4])
+    ).toBe(19);
+
+    expect(kadanesAlgo([-10, -2, -9, -4, -8, -6, -7, -1, -3, -5])).toBe(-1);
+  });
+});
 
 const stack: Stack<i32> = new Stack<i32>();
 describe("Stack", () => {
@@ -294,5 +316,175 @@ describe("Graph", () => {
 
   test("Dijkstra's Algorithm", () => {
     expect(graph.Dijkstra("A", "E")).toStrictEqual(["A", "C", "D", "F", "E"]);
+  });
+});
+
+describe("dynamic programming", () => {
+  test("levenshtein distance", () => {
+    expect(levenshteinDistance("abc", "yabd")).toBe(2);
+    expect(levenshteinDistance("abc", "abc")).toBe(0);
+    expect(levenshteinDistance("xabc", "abcx")).toBe(2);
+    expect(levenshteinDistance("abc", "xyz")).toBe(3);
+    expect(levenshteinDistance("horse", "ros")).toBe(3);
+  });
+});
+
+describe("math algorithms", () => {
+  test("factorials", () => {
+    expect(factorial(1)).toBe(1);
+    expect(factorial(2)).toBe(2);
+    expect(factorial(3)).toBe(6);
+    expect(factorial(4)).toBe(24);
+    expect(factorial(5)).toBe(120);
+    expect(factorial(6)).toBe(720);
+  });
+
+  test("get nth fib iterative", () => {
+    expect(fib(0)).toBe(0);
+    expect(fib(1)).toBe(1);
+    expect(fib(2)).toBe(1);
+    expect(fib(3)).toBe(2);
+    expect(fib(4)).toBe(3);
+    expect(fib(5)).toBe(5);
+    expect(fib(6)).toBe(8);
+    expect(fib(7)).toBe(13);
+  });
+
+  test("get nth fib exponential", () => {
+    expect(fibExp(0)).toBe(0);
+    expect(fibExp(1)).toBe(1);
+    expect(fibExp(2)).toBe(1);
+    expect(fibExp(3)).toBe(2);
+    expect(fibExp(4)).toBe(3);
+    expect(fibExp(5)).toBe(5);
+    expect(fibExp(6)).toBe(8);
+    expect(fibExp(7)).toBe(13);
+  });
+});
+
+describe("search algorithms", () => {
+  test("KnuthMorrisPratt algorithm", () => {
+    expect(kmpSearch("hannahhahhahahahhahahahannah", "hannah")).toBe(2);
+    expect(kmpSearch("hannahhahhahahahhahahahannah", "dsds")).toBe(0);
+    expect(kmpSearch("hannahhahhahahahhahahahannah", "ha")).toBe(9);
+    expect(kmpSearch("hannahhahhahahah hahah     ahannah", "hannah")).toBe(2);
+  });
+
+  test("binarySearch", () => {
+    expect(binarySearch([1, 2, 58, 99, 100], 100)).toBe(4);
+    expect(binarySearch([1, 2, 5, 99, 10], 5)).toBe(2);
+    expect(binarySearch([2, 5, 6, 9, 13, 15, 28, 30], 13)).toBe(4);
+    expect(binarySearch([2, 5, 6, 9, 13, 15, 28, 30], 1000)).toBe(-1);
+    expect(binarySearch([2, 5, 6, 9, 13, 15, 28, 30], 50)).toBe(-1);
+  });
+});
+
+describe("sorting algorithms", () => {
+  test("bubbleSort", () => {
+    expect(bubbleSort([8, 5, 2, 9, 5, 6, 3])).toStrictEqual([
+      2,
+      3,
+      5,
+      5,
+      6,
+      8,
+      9,
+    ]);
+  });
+
+  test("insertionSort", () => {
+    expect(insertionSort([8, 5, 2, 9, 5, 6, 3])).toStrictEqual([
+      2,
+      3,
+      5,
+      5,
+      6,
+      8,
+      9,
+    ]);
+  });
+
+  test("selectionSort", () => {
+    expect(selectionSort([8, 5, 2, 9, 5, 6, 3])).toStrictEqual([
+      2,
+      3,
+      5,
+      5,
+      6,
+      8,
+      9,
+    ]);
+  });
+
+  test("quickSort", () => {
+    expect(quickSort([10, 5, 2, 3])).toStrictEqual([2, 3, 5, 10]);
+    expect(quickSort([11, 7, 1, 14])).toStrictEqual([1, 7, 11, 14]);
+    expect(quickSort([3, 1, 7, 11])).toStrictEqual([1, 3, 7, 11]);
+    expect(quickSort([100, 200, 300, 400])).toStrictEqual([100, 200, 300, 400]);
+    expect(quickSort([-3, 4, 0, -2, 6, -1])).toStrictEqual([
+      -3,
+      -2,
+      -1,
+      0,
+      4,
+      6,
+    ]);
+    expect(quickSort([1, 4, 2, 10, 23, 3, 1, 0, 20])).toStrictEqual([
+      0,
+      1,
+      1,
+      2,
+      3,
+      4,
+      10,
+      20,
+      23,
+    ]);
+    expect(quickSort([-3])).toStrictEqual([-3]);
+  });
+
+  test("mergeSort", () => {
+    expect(mergeSort([10, 5, 2, 3])).toStrictEqual([2, 3, 5, 10]);
+    expect(mergeSort([11, 7, 1, 14])).toStrictEqual([1, 7, 11, 14]);
+    expect(mergeSort([3, 1, 7, 11])).toStrictEqual([1, 3, 7, 11]);
+    expect(mergeSort([100, 200, 300, 400])).toStrictEqual([100, 200, 300, 400]);
+    expect(mergeSort([-3, 4, 0, -2, 6, -1])).toStrictEqual([
+      -3,
+      -2,
+      -1,
+      0,
+      4,
+      6,
+    ]);
+    expect(mergeSort([1, 4, 2, 10, 23, 3, 1, 0, 20])).toStrictEqual([
+      0,
+      1,
+      1,
+      2,
+      3,
+      4,
+      10,
+      20,
+      23,
+    ]);
+    expect(mergeSort([-3])).toStrictEqual([-3]);
+  });
+
+  test("radixSort", () => {
+    expect(radixSort([10, 5, 2, 3])).toStrictEqual([2, 3, 5, 10]);
+    expect(radixSort([11, 7, 1, 14])).toStrictEqual([1, 7, 11, 14]);
+    expect(radixSort([3, 1, 7, 11])).toStrictEqual([1, 3, 7, 11]);
+    expect(radixSort([100, 200, 300, 400])).toStrictEqual([100, 200, 300, 400]);
+    expect(radixSort([1, 4, 2, 10, 23, 3, 1, 0, 20])).toStrictEqual([
+      0,
+      1,
+      1,
+      2,
+      3,
+      4,
+      10,
+      20,
+      23,
+    ]);
   });
 });

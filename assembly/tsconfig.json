@@ -1,6 +1,4 @@
 {
   "extends": "../../../../../../usr/local/lib/node_modules/assemblyscript/std/assembly.json",
-  "include": [
-    "./**/*.ts"
-  ]
+  "include": ["./**/*.ts", "__tests__/*.ts"]
 }
