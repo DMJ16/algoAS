@@ -1,5 +1,7 @@
 # as-algo 🚀
 
+![CircleCI](https://img.shields.io/circleci/build/github/DMJ16/ts-algo?style=for-the-badge)
+
 ### Summary 📖
 
 Algorithms, data structures, and general computer science problems in AssemblyScript.
@@ -13,6 +15,7 @@ AssemblyScript + WASI + Wasmtime + as-pect
 Test suites written in as-pect, which brings Jest and ts-jest to AssemblyScript.
 
 ### WASI & Wasmtime 🧩
+
 #### Mandelbrot
 
 ![](https://media.giphy.com/media/ifNKKnRWnSmLRMPdby/giphy.gif)

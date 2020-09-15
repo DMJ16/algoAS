@@ -1,5 +1,5 @@
 {
-  "name": "algoAS",
+  "name": "as-algo",
   "version": "0.0.1",
   "description": "Algorithms, data structures, and general computer science problems in AssemblyScript.",
   "main": "index.ts",
