@@ -12,7 +12,7 @@ import {
   Stack,
 } from "../dataStructures";
 import { levenshteinDistance } from "../dp";
-import { fib, factorial, fibExp } from "../math";
+import { fib, factorial, fibExp, getPrimes } from "../math";
 import { binarySearch, kmpSearch } from "../search";
 import {
   bubbleSort,
@@ -21,10 +21,11 @@ import {
   quickSort,
   mergeSort,
   radixSort,
+  topologicalSort,
 } from "../sorting";
 
 describe("array algorithms", () => {
-  test("Kadane's algorithm", () => {
+  test("kadane's algorithm", () => {
     expect(
       kadanesAlgo([3, 5, -9, 1, 3, -2, 3, 4, 7, 2, -9, 6, 3, 1, -5, 4])
     ).toBe(19);
@@ -261,61 +262,97 @@ describe("PriorityQueue", () => {
 
 const graph: Graph = new Graph();
 describe("Graph", () => {
-  test("remove vertices and remove edges", () => {
+  test("add vertices", () => {
     graph.addVertex("A");
     graph.addVertex("B");
     graph.addVertex("C");
-    expect(graph.adjList.size).toBe(3);
     graph.addVertex("D");
     graph.addVertex("E");
     graph.addVertex("F");
-    expect(graph.adjList.size).toBe(6);
+    expect(graph.adjList.keys().length).toBe(6);
+  });
+
+  test("add edges", () => {
     graph.addEdge("A", "B", 4);
     graph.addEdge("A", "C", 2);
     graph.addEdge("B", "E", 3);
     graph.addEdge("C", "D", 2);
-    expect(graph.removeEdge("A", "B")).toBe(true);
-    expect(graph.removeEdge("A", "C")).toBe(true);
-    expect(graph.removeEdge("B", "E")).toBe(true);
-    expect(graph.removeEdge("C", "D")).toBe(true);
-    expect(graph.removeVertex("A")).toBe(5);
-    expect(graph.removeVertex("B")).toBe(4);
-    expect(graph.removeVertex("C")).toBe(3);
-    expect(graph.removeVertex("D")).toBe(2);
-    expect(graph.removeVertex("E")).toBe(1);
-    expect(graph.removeVertex("F")).toBe(0);
-  });
-
-  test("add vertices", () => {
-    expect(graph.addVertex("A")).toBe(1);
-    expect(graph.addVertex("B")).toBe(2);
-    expect(graph.addVertex("C")).toBe(3);
-    expect(graph.addVertex("D")).toBe(4);
-    expect(graph.addVertex("E")).toBe(5);
-    expect(graph.addVertex("F")).toBe(6);
-  });
-
-  test("add edges", () => {
-    expect(graph.addEdge("A", "B", 4)).toBe(true);
-    expect(graph.addEdge("A", "C", 2)).toBe(true);
-    expect(graph.addEdge("B", "E", 3)).toBe(true);
-    expect(graph.addEdge("C", "D", 2)).toBe(true);
-    expect(graph.addEdge("C", "F", 4)).toBe(true);
-    expect(graph.addEdge("D", "E", 3)).toBe(true);
-    expect(graph.addEdge("D", "F", 1)).toBe(true);
-    expect(graph.addEdge("E", "F", 1)).toBe(true);
+    graph.addEdge("C", "F", 4);
+    graph.addEdge("D", "E", 3);
+    graph.addEdge("D", "F", 1);
+    graph.addEdge("E", "F", 1);
+    expect(graph.adjList.get("A").length).toBe(2);
+    expect(graph.adjList.get("B").length).toBe(2);
+    expect(graph.adjList.get("E").length).toBe(3);
+    expect(graph.adjList.get("C").length).toBe(3);
+    expect(graph.adjList.get("D").length).toBe(3);
+    expect(graph.adjList.get("F").length).toBe(3);
   });
 
   test("DFS traversal", () => {
-    expect(graph.DFS("A")).toStrictEqual(["A", "C", "F", "E", "D", "B"]);
+    expect(graph.dfs("A")).toStrictEqual(["A", "C", "F", "E", "D", "B"]);
   });
 
   test("BFS traversal", () => {
-    expect(graph.BFS("A")).toStrictEqual(["A", "B", "C", "E", "D", "F"]);
+    expect(graph.bfs("A")).toStrictEqual(["A", "B", "C", "E", "D", "F"]);
+  });
+
+  test("topological sort ", () => {
+    const dag = new Graph();
+    dag.addVertex("A");
+    dag.addVertex("B");
+    dag.addVertex("C");
+    dag.addVertex("D");
+    dag.addVertex("E");
+    dag.addVertex("F");
+    dag.addVertex("G");
+    dag.addEdge("A", "C", 1);
+    dag.addEdge("A", "B", 1);
+    dag.addEdge("A", "D", 1);
+    dag.addEdge("C", "D", 1);
+    dag.addEdge("D", "E", 1);
+    dag.addEdge("E", "F", 1);
+    dag.addEdge("B", "G", 1);
+    expect(dag.topologicalSort()).toStrictEqual([
+      "A",
+      "B",
+      "G",
+      "C",
+      "D",
+      "E",
+      "F",
+    ]);
   });
 
   test("Dijkstra's Algorithm", () => {
     expect(graph.Dijkstra("A", "E")).toStrictEqual(["A", "C", "D", "F", "E"]);
+  });
+
+  test("remove edges", () => {
+    graph.removeEdge("A", "B");
+    graph.removeEdge("A", "C");
+    graph.removeEdge("B", "E");
+    graph.removeEdge("C", "D");
+    graph.removeEdge("C", "F");
+    graph.removeEdge("D", "E");
+    graph.removeEdge("D", "F");
+    graph.removeEdge("E", "F");
+    expect(graph.adjList.get("A").length).toBe(0);
+    expect(graph.adjList.get("B").length).toBe(0);
+    expect(graph.adjList.get("E").length).toBe(0);
+    expect(graph.adjList.get("C").length).toBe(0);
+    expect(graph.adjList.get("D").length).toBe(0);
+    expect(graph.adjList.get("F").length).toBe(0);
+  });
+
+  test("remove vertices and edges", () => {
+    graph.removeVertex("A");
+    graph.removeVertex("B");
+    graph.removeVertex("C");
+    graph.removeVertex("D");
+    graph.removeVertex("E");
+    graph.removeVertex("F");
+    expect(graph.adjList.keys().length).toBe(0);
   });
 });
 
@@ -359,6 +396,38 @@ describe("math algorithms", () => {
     expect(fibExp(5)).toBe(5);
     expect(fibExp(6)).toBe(8);
     expect(fibExp(7)).toBe(13);
+  });
+
+  test("get primes", () => {
+    expect(getPrimes(5)).toStrictEqual([2, 3, 5]);
+    expect(getPrimes(20)).toStrictEqual([2, 3, 5, 7, 11, 13, 17, 19]);
+    expect(getPrimes(100)).toStrictEqual([
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+    ]);
   });
 });
 
@@ -486,5 +555,37 @@ describe("sorting algorithms", () => {
       20,
       23,
     ]);
+  });
+
+  test("topological sort", () => {
+    expect(
+      topologicalSort(
+        [1, 2, 3, 4],
+        [
+          [1, 2],
+          [1, 3],
+          [3, 2],
+          [4, 2],
+          [4, 3],
+        ]
+      )
+    ).toStrictEqual([4, 1, 3, 2]);
+
+    expect(
+      topologicalSort(
+        [1, 2, 3, 4, 5, 6, 7, 8],
+        [
+          [3, 1],
+          [8, 1],
+          [8, 7],
+          [5, 7],
+          [5, 2],
+          [1, 4],
+          [1, 6],
+          [1, 2],
+          [7, 6],
+        ]
+      )
+    ).toStrictEqual([8, 5, 7, 3, 1, 4, 6, 2]);
   });
 });

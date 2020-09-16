@@ -72,7 +72,7 @@ export class Graph {
     return this.adjList.size;
   }
 
-  DFS(startVertex: string): string[] {
+  dfs(startVertex: string): string[] {
     const stack = [startVertex];
     const data: string[] = [];
     const visited = new Map<string, bool>();
@@ -93,7 +93,7 @@ export class Graph {
     return data;
   }
 
-  BFS(startVertex: string): string[] {
+  bfs(startVertex: string): string[] {
     const queue = [startVertex];
     const data: string[] = [];
     const visited = new Map<string, bool>();
@@ -114,12 +114,48 @@ export class Graph {
     return data;
   }
 
+  topologicalSort(): string[] {
+    let stack: string[] = [];
+    const data: string[] = [];
+    const visited: Set<string> = new Set<string>();
+    let currentVertex: string;
+
+    for (let i = 0; i < this.adjList.size; i++) {
+      currentVertex = this.adjList.keys()[i];
+      if (!visited.has(currentVertex)) {
+        stack = this.topologicalHelper(currentVertex, visited, stack);
+      }
+    }
+
+    while (stack.length) {
+      data.push(stack.pop());
+    }
+
+    return data;
+  }
+
+  topologicalHelper(
+    currentVertex: string,
+    visited: Set<string>,
+    stack: string[]
+  ): string[] {
+    visited.add(currentVertex);
+    for (let i = 0; i < this.adjList.get(currentVertex).length; i++) {
+      const neighbor = this.adjList.get(currentVertex)[i];
+      if (!visited.has(neighbor.vertex)) {
+        this.topologicalHelper(neighbor.vertex, visited, stack);
+      }
+    }
+    stack.push(currentVertex);
+    return stack;
+  }
+
   Dijkstra(start: string, end: string): string[] {
     const distances = new Map<string, i32>();
     const prev = new Map<string, string>();
     const PQ = new PriorityQueue<string>();
     const path: string[] = [];
-    let smallest: string = "false";
+    let smallest: string = "-1";
 
     for (let i = 0; i < this.adjList.keys().length; i++) {
       const v = this.adjList.keys()[i];
@@ -130,20 +166,20 @@ export class Graph {
         distances.set(v, I32.MAX_VALUE);
         PQ.enqueue(v, I32.MAX_VALUE);
       }
-      prev.set(v, "false");
+      prev.set(v, "-1");
     }
 
     while (PQ.values.length) {
       smallest = PQ.dequeue().val;
       if (smallest === end) {
-        while (prev.get(smallest) !== "false") {
+        while (prev.get(smallest) !== "-1") {
           path.push(smallest);
           smallest = prev.get(smallest);
         }
         break;
       }
 
-      if (smallest !== "false" || distances.get(smallest) !== I32.MAX_VALUE) {
+      if (smallest !== "-1" || distances.get(smallest) !== I32.MAX_VALUE) {
         for (let i = 0; i < this.adjList.get(smallest).length; i++) {
           let nextNode = this.adjList.get(smallest)[i];
           let newDistance = distances.get(smallest) + nextNode.weight;
