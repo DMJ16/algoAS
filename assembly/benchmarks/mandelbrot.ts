@@ -1,5 +1,5 @@
 import "wasi";
-import { Console } from "as-wasi";
+import { Console } from "../../node_modules/as-wasi/assembly/as-wasi";
 
 export function mandelbrot(): void {
   const mandelbrot = calculateMandelbrot(1000, -2.0, 1.0, -1.0, 1.0, 100, 24);
