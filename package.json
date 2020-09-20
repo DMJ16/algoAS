@@ -8,9 +8,9 @@
     "test:ci": "asp --summary",
     "asbuild:untouched": "asc assembly/index.as.ts --target debug",
     "asbuild:optimized": "asc assembly/index.as.ts --target release",
-    "asbuild:wasi": "asc assembly/index.as.ts -b build/algoAS.wasm -t build/algoAS.wat --runtime half",
+    "asbuild:wasi": "asc assembly/index.as.ts -b build/as-algo.wasm -t build/as-algo.wat --runtime half",
     "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized && npm run asbuild:wasi",
-    "wasmtime": "wasmtime --dir . build/algoAS.wasm",
+    "wasmtime": "wasmtime --dir . build/as-algo.wasm",
     "wasi": "npm run asbuild:wasi && npm run wasmtime",
     "asbuild:watch": "onchange -i 'assembly/**/*' -- npm run start"
   },
