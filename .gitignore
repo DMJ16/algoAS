@@ -1,6 +1,1 @@
-node_modules
-build
-example.spec.ts
-*.wasm
-*.wasm.map
-*.asm.js
+node_modules/
