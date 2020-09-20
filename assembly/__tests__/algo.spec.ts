@@ -1,4 +1,4 @@
-import { kadanesAlgo } from "../arrays";
+import { kadanesAlgo, spiralTraversal } from "../arrays";
 import {
   BST,
   DoublyLinkedList,
@@ -37,6 +37,27 @@ describe("array algorithms", () => {
     ).toBe(19);
 
     expect(kadanesAlgo([-10, -2, -9, -4, -8, -6, -7, -1, -3, -5])).toBe(-1);
+  });
+
+  test("spiral traversal", () => {
+    expect(
+      spiralTraversal([
+        [1, 2, 3, 4],
+        [12, 13, 14, 5],
+        [11, 16, 15, 6],
+        [10, 9, 8, 7],
+      ])
+    ).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]);
+
+    expect(
+      spiralTraversal([
+        [1, 2, 3],
+        [12, 13, 4],
+        [11, 14, 5],
+        [10, 15, 6],
+        [9, 8, 7],
+      ])
+    ).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]);
   });
 });
 
@@ -331,18 +352,18 @@ describe("Graph", () => {
   });
 
   test("Dijkstra's Algorithm", () => {
-    expect(graph.Dijkstra("A", "E")).toStrictEqual(["A", "C", "D", "F", "E"]);
+    expect(graph.dijkstra("A", "E")).toStrictEqual(["A", "C", "D", "F", "E"]);
   });
 
   test("remove edges", () => {
-    expect(graph.removeEdge("A", "B")).toBeTruthy();
-    expect(graph.removeEdge("A", "C")).toBeTruthy();
-    expect(graph.removeEdge("B", "E")).toBeTruthy();
-    expect(graph.removeEdge("C", "D")).toBeTruthy();
-    expect(graph.removeEdge("C", "F")).toBeTruthy();
-    expect(graph.removeEdge("D", "E")).toBeTruthy();
-    expect(graph.removeEdge("D", "F")).toBeTruthy();
-    expect(graph.removeEdge("E", "F")).toBeTruthy();
+    graph.removeEdge("A", "B");
+    graph.removeEdge("A", "C");
+    graph.removeEdge("B", "E");
+    graph.removeEdge("C", "D");
+    graph.removeEdge("C", "F");
+    graph.removeEdge("D", "E");
+    graph.removeEdge("D", "F");
+    graph.removeEdge("E", "F");
     expect(graph.adjList.get("A").length).toBe(0);
     expect(graph.adjList.get("B").length).toBe(0);
     expect(graph.adjList.get("E").length).toBe(0);
@@ -357,8 +378,7 @@ describe("Graph", () => {
     graph.removeVertex("C");
     graph.removeVertex("D");
     graph.removeVertex("E");
-    graph.removeVertex("F");
-    expect(graph.adjList.keys().length).toBe(0);
+    expect(graph.removeVertex("F")).toBe(0);
   });
 });
 

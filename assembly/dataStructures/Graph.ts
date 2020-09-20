@@ -19,22 +19,14 @@ export class Graph {
     return this.adjList.size;
   }
 
-  addEdge(v1: string, v2: string, weight: i32): bool {
-    const len1 = this.adjList.get(v1).length;
-    const len2 = this.adjList.get(v2).length;
+  addEdge(v1: string, v2: string, weight: i32): void {
     if (this.adjList.has(v1) && this.adjList.has(v2)) {
       this.adjList.get(v1).push(new GraphNode(v2, weight));
       this.adjList.get(v2).push(new GraphNode(v1, weight));
     }
-    return (
-      len1 < this.adjList.get(v1).length && len2 < this.adjList.get(v2).length
-    );
   }
 
-  removeEdge(v1: string, v2: string): bool {
-    const len1 = this.adjList.get(v1).length;
-    const len2 = this.adjList.get(v2).length;
-
+  removeEdge(v1: string, v2: string): void {
     if (this.adjList.has(v1) && this.adjList.has(v2)) {
       if (this.adjList.get(v1).length) {
         const arr = this.adjList.get(v1);
@@ -56,9 +48,6 @@ export class Graph {
         this.adjList.set(v2, newArr);
       }
     }
-    return (
-      len1 > this.adjList.get(v1).length && len2 > this.adjList.get(v2).length
-    );
   }
 
   removeVertex(v: string): i32 {
@@ -150,45 +139,44 @@ export class Graph {
     return stack;
   }
 
-  Dijkstra(start: string, end: string): string[] {
-    const distances = new Map<string, i32>();
-    const prev = new Map<string, string>();
-    const PQ = new PriorityQueue<string>();
+  dijkstra(start: string, end: string): string[] {
     const path: string[] = [];
-    let smallest: string = "-1";
+    const distances: Map<string, i32> = new Map<string, i32>();
+    const prev: Map<string, string> = new Map<string, string>();
+    const PQ: PriorityQueue<string> = new PriorityQueue<string>();
+    let smallest: string = "";
 
     for (let i = 0; i < this.adjList.keys().length; i++) {
-      const v = this.adjList.keys()[i];
-      if (v === start) {
-        distances.set(v, 0);
-        PQ.enqueue(v, 0);
+      const vertex = this.adjList.keys()[i];
+      if (vertex === start) {
+        distances.set(vertex, 0);
+        PQ.enqueue(vertex, 0);
       } else {
-        distances.set(v, I32.MAX_VALUE);
-        PQ.enqueue(v, I32.MAX_VALUE);
+        distances.set(vertex, i32.MAX_VALUE);
+        PQ.enqueue(vertex, i32.MAX_VALUE);
       }
-      prev.set(v, "-1");
+      prev.set(vertex, "");
     }
 
     while (PQ.values.length) {
       smallest = PQ.dequeue().val;
-      if (smallest === end) {
-        while (prev.get(smallest) !== "-1") {
+      if (smallest == end) {
+        while (prev.get(smallest) !== "") {
           path.push(smallest);
           smallest = prev.get(smallest);
         }
         break;
       }
 
-      if (smallest !== "-1" || distances.get(smallest) !== I32.MAX_VALUE) {
+      if (smallest !== "" && distances.get(smallest) !== i32.MAX_VALUE) {
         for (let i = 0; i < this.adjList.get(smallest).length; i++) {
-          let nextNode = this.adjList.get(smallest)[i];
-          let newDistance = distances.get(smallest) + nextNode.weight;
-          let nextNeighbor = nextNode.vertex;
-          let distNextNeighbor = distances.get(nextNeighbor);
-          if (newDistance < distNextNeighbor) {
-            distances.set(nextNeighbor, newDistance);
-            prev.set(nextNeighbor, smallest);
-            PQ.enqueue(nextNeighbor, newDistance);
+          const nextNode = this.adjList.get(smallest)[i];
+          const newDistance = distances.get(smallest) + nextNode.weight;
+          const nextNodeDistance = distances.get(nextNode.vertex);
+          if (newDistance < nextNodeDistance) {
+            distances.set(nextNode.vertex, newDistance);
+            prev.set(nextNode.vertex, smallest);
+            PQ.enqueue(nextNode.vertex, newDistance);
           }
         }
       }

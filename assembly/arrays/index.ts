@@ -1,1 +1,2 @@
-export { kadanesAlgo } from "../arrays/kadanesAlgo";
+export { kadanesAlgo } from "./kadanesAlgo";
+export { spiralTraversal } from "./spiralTraversal";

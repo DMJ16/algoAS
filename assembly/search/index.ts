@@ -1,2 +1,2 @@
-export { binarySearch } from "../search/binarySearch";
-export { kmpSearch } from "../search/knuthMorrisPratt";
+export { binarySearch } from "./binarySearch";
+export { kmpSearch } from "./knuthMorrisPratt";

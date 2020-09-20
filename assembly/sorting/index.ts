@@ -1,7 +1,7 @@
-export { bubbleSort } from "../sorting/bubbleSort";
-export { insertionSort } from "../sorting/insertionSort";
-export { selectionSort } from "../sorting/selectionSort";
-export { quickSort } from "../sorting/quickSort";
-export { mergeSort } from "../sorting/mergeSort";
-export { radixSort } from "../sorting/radixSort";
+export { bubbleSort } from "./bubbleSort";
+export { insertionSort } from "./insertionSort";
+export { selectionSort } from "./selectionSort";
+export { quickSort } from "./quickSort";
+export { mergeSort } from "./mergeSort";
+export { radixSort } from "./radixSort";
 export { topologicalSort } from "./topologicalSort";

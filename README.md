@@ -19,3 +19,7 @@ Test suites written in as-pect, which brings Jest and ts-jest to AssemblyScript.
 #### Mandelbrot
 
 ![](https://media.giphy.com/media/ifNKKnRWnSmLRMPdby/giphy.gif)
+
+#### Matrix Spiral Traversal
+
+![](https://media.giphy.com/media/izSfqealbmnmaJJaHG/giphy.gif)
