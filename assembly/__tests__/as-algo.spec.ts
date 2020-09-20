@@ -1,4 +1,10 @@
-import { kadanesAlgo, spiralTraversal } from "../arrays";
+import {
+  kadanesAlgo,
+  spiralTraversal,
+  isValidSubsequence,
+  searchInSortedMatrix,
+  riverSizes,
+} from "../arrays";
 import {
   BST,
   DoublyLinkedList,
@@ -58,6 +64,79 @@ describe("array algorithms", () => {
         [9, 8, 7],
       ])
     ).toStrictEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]);
+  });
+
+  test("isValidSubsequence", () => {
+    expect(
+      isValidSubsequence([5, 1, 22, 25, 6, -1, 8, 10], [1, 6, -1, 10])
+    ).toBeTruthy();
+
+    expect(isValidSubsequence([1], [1])).toBeTruthy();
+
+    expect(isValidSubsequence([], [])).toBeTruthy();
+
+    expect(
+      isValidSubsequence([5, 1, 22, 25, 6, -1, 8, 10], [1, 6, -1, -1])
+    ).toBeFalsy();
+  });
+
+  test("searchInSortedMatrix", () => {
+    expect(
+      searchInSortedMatrix(
+        [
+          [1, 4, 7, 12, 15, 1000],
+          [2, 5, 19, 31, 32, 1001],
+          [3, 8, 24, 33, 35, 1002],
+          [40, 41, 42, 44, 45, 1003],
+          [99, 100, 103, 106, 128, 1004],
+        ],
+        44
+      )
+    ).toStrictEqual([3, 3]);
+
+    expect(
+      searchInSortedMatrix(
+        [
+          [1, 4, 7, 12, 15, 1000],
+          [2, 5, 19, 31, 32, 1001],
+          [3, 8, 24, 33, 35, 1002],
+          [40, 41, 42, 44, 45, 1003],
+          [99, 100, 103, 106, 128, 1004],
+        ],
+        15
+      )
+    ).toStrictEqual([0, 4]);
+
+    expect(searchInSortedMatrix([[]], 15)).toStrictEqual([-1, -1]);
+
+    expect(
+      searchInSortedMatrix(
+        [
+          [16, 17],
+          [18, 19],
+        ],
+        15
+      )
+    ).toStrictEqual([-1, -1]);
+  });
+
+  test("riverSizes", () => {
+    expect(
+      riverSizes([
+        [1, 0, 0, 1, 0],
+        [1, 0, 1, 0, 0],
+        [0, 0, 1, 0, 1],
+        [1, 0, 1, 0, 1],
+        [1, 0, 1, 1, 0],
+      ])
+    ).toStrictEqual([2, 1, 5, 2, 2]);
+
+    expect(
+      riverSizes([
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+      ])
+    ).toStrictEqual([]);
   });
 });
 
@@ -579,22 +658,5 @@ describe("sorting algorithms", () => {
         ]
       )
     ).toStrictEqual([4, 1, 3, 2]);
-
-    expect(
-      topologicalSort(
-        [1, 2, 3, 4, 5, 6, 7, 8],
-        [
-          [3, 1],
-          [8, 1],
-          [8, 7],
-          [5, 7],
-          [5, 2],
-          [1, 4],
-          [1, 6],
-          [1, 2],
-          [7, 6],
-        ]
-      )
-    ).toStrictEqual([8, 5, 7, 3, 1, 4, 6, 2]);
   });
 });
