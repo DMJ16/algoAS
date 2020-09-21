@@ -14,7 +14,7 @@ AssemblyScript + as-wasi + wasmtime + as-pect
 
 Test suites written in as-pect, which brings Jest and ts-jest to AssemblyScript.
 
-### as-wasi + wasmtime 🧩
+### WASI 🧩
 
 #### Mandelbrot
 
