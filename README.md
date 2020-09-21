@@ -8,13 +8,13 @@ Algorithms, data structures, and general computer science problems in AssemblySc
 
 ### Technology and Tools 🧰
 
-AssemblyScript + WASI + Wasmtime + as-pect
+AssemblyScript + as-wasi + wasmtime + as-pect
 
 ### Tests 🧪
 
 Test suites written in as-pect, which brings Jest and ts-jest to AssemblyScript.
 
-### WASI & Wasmtime 🧩
+### as-wasi + wasmtime 🧩
 
 #### Mandelbrot
 
