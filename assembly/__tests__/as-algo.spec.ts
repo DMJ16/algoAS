@@ -6,16 +6,17 @@ import {
   riverSizes,
 } from "../arrays";
 import {
-  BST,
+  Node,
+  Stack,
+  Queue,
+  LinkedList,
   DoublyLinkedList,
   ListNode,
-  Graph,
-  LinkedList,
-  Node,
+  HashTable,
+  BST,
   MaxBinaryHeap,
   PriorityQueue,
-  Queue,
-  Stack,
+  Graph,
 } from "../dataStructures";
 import { levenshteinDistance } from "../dp";
 import {
@@ -144,6 +145,7 @@ const stack: Stack<i32> = new Stack<i32>();
 const queue: Queue<i32> = new Queue<i32>();
 const list: LinkedList<i32> = new LinkedList<i32>();
 const dList: DoublyLinkedList<i32> = new DoublyLinkedList<i32>();
+const table: HashTable = new HashTable();
 const tree: BST = new BST();
 const heap: MaxBinaryHeap = new MaxBinaryHeap();
 const PQ: PriorityQueue<string> = new PriorityQueue<string>();
@@ -285,6 +287,36 @@ describe("data structures", () => {
       expect((dList.shift() as ListNode<i32>).val).toBe(30);
       expect((dList.shift() as ListNode<i32>).val).toBe(6);
       expect((dList.shift() as ListNode<i32>).val).toBe(50000);
+    });
+  });
+
+  describe("HashTable", () => {
+    test("set key-value pairs and retrieve values by key", () => {
+      table.set("Skywalker", "Luke");
+      table.set("Baggins", "Frodo");
+      table.set("Wayne", "Bruce");
+      table.set("Prince", "Diana");
+      table.set("Kent", "Clark");
+      expect(table.get("Skywalker")).toBe("Luke");
+      expect(table.get("Baggins")).toBe("Frodo");
+      expect(table.get("Wayne")).toBe("Bruce");
+      expect(table.get("Prince")).toBe("Diana");
+      expect(table.get("Kent")).toBe("Clark");
+      expect(table.get("Stark")).toBeNull();
+    });
+    test("get keys array", () => {
+      expect(table.keys()).toContain("Skywalker");
+      expect(table.keys()).toContain("Baggins");
+      expect(table.keys()).toContain("Wayne");
+      expect(table.keys()).toContain("Prince");
+      expect(table.keys()).toContain("Kent");
+    });
+    test("get values array", () => {
+      expect(table.values()).toContain("Luke");
+      expect(table.values()).toContain("Frodo");
+      expect(table.values()).toContain("Bruce");
+      expect(table.values()).toContain("Diana");
+      expect(table.values()).toContain("Clark");
     });
   });
 
