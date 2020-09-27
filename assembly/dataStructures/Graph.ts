@@ -13,7 +13,7 @@ export class Graph {
   adjList: Map<string, GraphNode[]> = new Map<string, GraphNode[]>();
 
   addVertex(v: string): i32 {
-    if (!this.adjList.has(v)) {
+    if (this.adjList.has(v) === false) {
       this.adjList.set(v, []);
     }
     return this.adjList.size;
@@ -23,6 +23,8 @@ export class Graph {
     if (this.adjList.has(v1) && this.adjList.has(v2)) {
       this.adjList.get(v1).push(new GraphNode(v2, weight));
       this.adjList.get(v2).push(new GraphNode(v1, weight));
+    } else {
+      throw new Error("one or more vertex not found in Graph");
     }
   }
 
@@ -47,18 +49,21 @@ export class Graph {
         }
         this.adjList.set(v2, newArr);
       }
+    } else {
+      throw new Error("one or more vertex not found in Graph");
     }
   }
 
-  removeVertex(v: string): i32 {
+  removeVertex(v: string): bool {
     if (this.adjList.has(v)) {
       const arr = this.adjList.get(v);
       for (let i = 0; i < arr.length; i++) {
         this.removeEdge(v, arr[i].vertex);
       }
       this.adjList.delete(v);
+      return true;
     }
-    return this.adjList.size;
+    return false;
   }
 
   dfs(startVertex: string): string[] {
@@ -73,7 +78,7 @@ export class Graph {
       const list = this.adjList.get(currentVertex);
       for (let i = 0; i < list.length; i++) {
         const edge = list[i];
-        if (!visited.has(edge.vertex)) {
+        if (visited.has(edge.vertex) === false) {
           visited.set(edge.vertex, true);
           stack.push(edge.vertex);
         }
@@ -94,13 +99,29 @@ export class Graph {
       const list = this.adjList.get(currentVertex);
       for (let i = 0; i < list.length; i++) {
         const edge = list[i];
-        if (!visited.has(edge.vertex)) {
+        if (visited.has(edge.vertex) === false) {
           visited.set(edge.vertex, true);
           queue.push(edge.vertex);
         }
       }
     }
     return data;
+  }
+
+  _topologicalHelper(
+    currentVertex: string,
+    visited: Set<string>,
+    stack: string[]
+  ): string[] {
+    visited.add(currentVertex);
+    for (let i = 0; i < this.adjList.get(currentVertex).length; i++) {
+      const neighbor = this.adjList.get(currentVertex)[i];
+      if (visited.has(neighbor.vertex) === false) {
+        this._topologicalHelper(neighbor.vertex, visited, stack);
+      }
+    }
+    stack.push(currentVertex);
+    return stack;
   }
 
   topologicalSort(): string[] {
@@ -111,8 +132,8 @@ export class Graph {
 
     for (let i = 0; i < this.adjList.size; i++) {
       currentVertex = this.adjList.keys()[i];
-      if (!visited.has(currentVertex)) {
-        stack = this.topologicalHelper(currentVertex, visited, stack);
+      if (visited.has(currentVertex) === false) {
+        stack = this._topologicalHelper(currentVertex, visited, stack);
       }
     }
 
@@ -121,22 +142,6 @@ export class Graph {
     }
 
     return data;
-  }
-
-  topologicalHelper(
-    currentVertex: string,
-    visited: Set<string>,
-    stack: string[]
-  ): string[] {
-    visited.add(currentVertex);
-    for (let i = 0; i < this.adjList.get(currentVertex).length; i++) {
-      const neighbor = this.adjList.get(currentVertex)[i];
-      if (!visited.has(neighbor.vertex)) {
-        this.topologicalHelper(neighbor.vertex, visited, stack);
-      }
-    }
-    stack.push(currentVertex);
-    return stack;
   }
 
   dijkstra(start: string, end: string): string[] {
@@ -161,14 +166,14 @@ export class Graph {
     while (PQ.values.length) {
       smallest = PQ.dequeue().val;
       if (smallest == end) {
-        while (prev.get(smallest) !== "") {
+        while (prev.get(smallest) != "") {
           path.push(smallest);
           smallest = prev.get(smallest);
         }
         break;
       }
 
-      if (smallest !== "" && distances.get(smallest) !== i32.MAX_VALUE) {
+      if (smallest != "" && distances.get(smallest) !== i32.MAX_VALUE) {
         for (let i = 0; i < this.adjList.get(smallest).length; i++) {
           const nextNode = this.adjList.get(smallest)[i];
           const newDistance = distances.get(smallest) + nextNode.weight;

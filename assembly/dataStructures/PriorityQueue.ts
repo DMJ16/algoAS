@@ -65,14 +65,14 @@ export class PriorityQueue<T> {
         right = this.values[rightChildIdx];
         if (
           (swap && right.priority < this.values[leftChildIdx].priority) ||
-          (!swap && right.priority < sinkNode.priority)
+          (swap === false && right.priority < sinkNode.priority)
         ) {
           swapIdx = rightChildIdx;
           swap = true;
         }
       }
 
-      if (!swap) break;
+      if (swap === false) break;
       const temp = this.values[i];
       this.values[i] = this.values[swapIdx];
       this.values[swapIdx] = temp;

@@ -18,7 +18,7 @@ export class DoublyLinkedList<T> {
 
   push(val: T): this {
     const newNode = new ListNode<T>(val);
-    if (!this.head) {
+    if (this.head == null) {
       this.head = newNode;
       this.tail = newNode;
     } else {
@@ -32,7 +32,7 @@ export class DoublyLinkedList<T> {
   }
 
   pop(): ListNode<T> | null {
-    if (!this.head) return null;
+    if (this.head == null) return null;
     const poppedNode = this.tail;
     let tail: ListNode<T>;
     if (poppedNode !== null) {
@@ -48,7 +48,7 @@ export class DoublyLinkedList<T> {
 
   shift(): ListNode<T> | null {
     const shiftedHead = this.head;
-    if (!shiftedHead) return null;
+    if (shiftedHead == null) return null;
     const newHead = shiftedHead.next;
     if (newHead !== null) {
       this.head = newHead;
@@ -63,7 +63,7 @@ export class DoublyLinkedList<T> {
   unshift(val: T): this {
     const newNode = new ListNode<T>(val);
     const head = this.head;
-    if (!head) {
+    if (head == null) {
       this.head = newNode;
       this.tail = newNode;
     } else {

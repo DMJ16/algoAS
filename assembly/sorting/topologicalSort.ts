@@ -27,7 +27,7 @@ function removeDeps(node: JobNode, noReqNodes: JobNode[]): void {
   while (node.deps.length) {
     const dep = node.deps.pop();
     dep.reqsCount--;
-    if (!dep.reqsCount) noReqNodes.push(dep);
+    if (dep.reqsCount === 0) noReqNodes.push(dep);
   }
 }
 
@@ -62,7 +62,7 @@ class JobGraph {
   }
 
   getNode(job: i32): JobNode {
-    if (!this.graph.has(job)) this.addNode(job);
+    if (this.graph.has(job) === false) this.addNode(job);
     return this.graph.get(job);
   }
 }

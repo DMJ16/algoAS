@@ -7,7 +7,7 @@ export class Stack<T> {
 
   push(val: T): i32 {
     const newNode = new Node<T>(val);
-    if (!this.first) {
+    if (this.first == null) {
       this.first = newNode;
       this.last = newNode;
     } else {
@@ -19,7 +19,7 @@ export class Stack<T> {
 
   pop(): Node<T> | null {
     const popNode = this.first;
-    if (!popNode) return null;
+    if (popNode == null) return null;
     if (this.first === this.last) {
       this.last = null;
     }

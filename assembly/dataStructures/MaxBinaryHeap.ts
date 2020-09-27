@@ -55,7 +55,7 @@ export class MaxBinaryHeap {
       if (rightChildIdx < this.values.length) {
         right = this.values[rightChildIdx];
         if (
-          (!swap && temp < right) ||
+          (swap === false && temp < right) ||
           (swap && right > this.values[leftChildIdx])
         ) {
           swapIdx = rightChildIdx;
@@ -63,7 +63,7 @@ export class MaxBinaryHeap {
         }
       }
 
-      if (!swap) break;
+      if (swap === false) break;
       this.values[i] = this.values[swapIdx];
       this.values[swapIdx] = temp;
       i = swapIdx;

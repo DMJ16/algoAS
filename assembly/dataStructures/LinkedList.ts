@@ -11,7 +11,7 @@ export class LinkedList<T> {
 
   push(val: T): this {
     const newNode = new Node<T>(val);
-    if (!this.head) {
+    if (this.head == null) {
       this.head = newNode;
       this.tail = newNode;
     } else {
@@ -24,7 +24,7 @@ export class LinkedList<T> {
 
   pop(): Node<T> | null {
     let currentNode = this.head;
-    if (!currentNode) return null;
+    if (currentNode == null) return null;
     let nextNode = currentNode.next;
     const poppedNode = this.tail;
     while (nextNode) {
@@ -40,7 +40,7 @@ export class LinkedList<T> {
 
   shift(): Node<T> | null {
     const shiftedHead = this.head;
-    if (!shiftedHead) return null;
+    if (shiftedHead == null) return null;
     const head = this.head;
     if (head) this.head = head.next;
     shiftedHead.next = null;
@@ -51,7 +51,7 @@ export class LinkedList<T> {
 
   unshift(val: T): this {
     const newNode = new Node<T>(val);
-    if (!this.head) {
+    if (this.head == null) {
       this.head = newNode;
       this.tail = newNode;
     } else {
@@ -108,7 +108,7 @@ export class LinkedList<T> {
 
   reverse(): this | null {
     let currentNode = this.head;
-    if (!currentNode) return null;
+    if (currentNode == null) return null;
     this.head = this.tail;
     this.tail = currentNode;
     let next: Node<T> | null = null;

@@ -7,7 +7,7 @@ export class Queue<T> {
 
   enqueue(val: T): i32 {
     const newNode = new Node<T>(val);
-    if (!this.first) {
+    if (this.first == null) {
       this.first = newNode;
       this.last = newNode;
     } else {
@@ -20,7 +20,7 @@ export class Queue<T> {
 
   dequeue(): Node<T> | null {
     const deqNode = this.first;
-    if (!deqNode) return null;
+    if (deqNode == null) return null;
     if (this.first === this.last) this.last = null;
     this.first = deqNode.next;
     this.size--;

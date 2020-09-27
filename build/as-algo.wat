@@ -1678,7 +1678,7 @@
  (func $assembly/wasi/mandelbrot/Complex#constructor (param $0 f64) (param $1 f64) (result i32)
   (local $2 i32)
   i32.const 16
-  i32.const 5
+  i32.const 6
   call $~lib/rt/tlsf/__alloc
   call $~lib/rt/pure/__retain
   local.tee $2
@@ -1713,7 +1713,7 @@
   loop $for-loop|0
    local.get $5
    i32.const 1000
-   i32.le_s
+   i32.le_u
    if
     local.get $2
     f64.load
@@ -2168,7 +2168,7 @@
    i32.store offset=8
   end
  )
- (func $~lib/array/Array<i32>#push (param $0 i32) (param $1 i32)
+ (func $~lib/array/Array<u32>#push (param $0 i32) (param $1 i32)
   (local $2 i32)
   (local $3 i32)
   local.get $0
@@ -2191,7 +2191,7 @@
   local.get $3
   i32.store offset=12
  )
- (func $~lib/array/Array<~lib/array/Array<i32>>#push (param $0 i32) (param $1 i32)
+ (func $~lib/array/Array<~lib/array/Array<u32>>#push (param $0 i32) (param $1 i32)
   (local $2 i32)
   (local $3 i32)
   local.get $1
@@ -2220,7 +2220,7 @@
   local.get $1
   call $~lib/rt/pure/__release
  )
- (func $~lib/array/Array<~lib/array/Array<i32>>#__get (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/array/Array<~lib/array/Array<u32>>#__get (param $0 i32) (param $1 i32) (result i32)
   local.get $1
   local.get $0
   i32.load offset=12
@@ -2253,7 +2253,7 @@
   end
   local.get $0
  )
- (func $~lib/array/Array<i32>#__get (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/array/Array<u32>#__get (param $0 i32) (param $1 i32) (result i32)
   local.get $1
   local.get $0
   i32.load offset=12
@@ -2508,7 +2508,7 @@
     local.set $0
     local.get $4
     local.get $5
-    call $~lib/array/Array<~lib/array/Array<i32>>#__get
+    call $~lib/array/Array<~lib/array/Array<u32>>#__get
     local.set $6
     i32.const 0
     local.set $3
@@ -2531,15 +2531,15 @@
               block $case1|2
                local.get $6
                local.get $3
-               call $~lib/array/Array<i32>#__get
+               call $~lib/array/Array<u32>#__get
                local.tee $2
                i32.const 0
-               i32.ge_s
+               i32.ge_u
                local.tee $0
                if (result i32)
                 local.get $2
                 i32.const 2
-                i32.le_s
+                i32.le_u
                else
                 local.get $0
                end
@@ -2548,12 +2548,12 @@
                if
                 local.get $2
                 i32.const 3
-                i32.ge_s
+                i32.ge_u
                 local.tee $0
                 if (result i32)
                  local.get $2
                  i32.const 5
-                 i32.le_s
+                 i32.le_u
                 else
                  local.get $0
                 end
@@ -2562,12 +2562,12 @@
                 br_if $case1|2
                 local.get $2
                 i32.const 6
-                i32.ge_s
+                i32.ge_u
                 local.tee $0
                 if (result i32)
                  local.get $2
                  i32.const 10
-                 i32.le_s
+                 i32.le_u
                 else
                  local.get $0
                 end
@@ -2576,12 +2576,12 @@
                 br_if $case2|2
                 local.get $2
                 i32.const 11
-                i32.ge_s
+                i32.ge_u
                 local.tee $0
                 if (result i32)
                  local.get $2
                  i32.const 30
-                 i32.le_s
+                 i32.le_u
                 else
                  local.get $0
                 end
@@ -2590,12 +2590,12 @@
                 br_if $case3|2
                 local.get $2
                 i32.const 31
-                i32.ge_s
+                i32.ge_u
                 local.tee $0
                 if (result i32)
                  local.get $2
                  i32.const 100
-                 i32.le_s
+                 i32.le_u
                 else
                  local.get $0
                 end
@@ -2604,12 +2604,12 @@
                 br_if $case4|2
                 local.get $2
                 i32.const 101
-                i32.ge_s
+                i32.ge_u
                 local.tee $0
                 if (result i32)
                  local.get $2
                  i32.const 200
-                 i32.le_s
+                 i32.le_u
                 else
                  local.get $0
                 end
@@ -2618,12 +2618,12 @@
                 br_if $case5|2
                 local.get $2
                 i32.const 201
-                i32.ge_s
+                i32.ge_u
                 local.tee $0
                 if (result i32)
                  local.get $2
                  i32.const 400
-                 i32.le_s
+                 i32.le_u
                 else
                  local.get $0
                 end
@@ -2632,12 +2632,12 @@
                 br_if $case6|2
                 local.get $2
                 i32.const 401
-                i32.ge_s
+                i32.ge_u
                 local.tee $0
                 if (result i32)
                  local.get $2
                  i32.const 700
-                 i32.le_s
+                 i32.le_u
                 else
                  local.get $0
                 end
@@ -2748,7 +2748,7 @@
   (local $5 i32)
   (local $6 i32)
   (local $7 i32)
-  i32.const 4
+  i32.const 8
   i32.const 1936
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
@@ -2759,12 +2759,12 @@
    i32.lt_s
    if
     local.get $4
-    i32.const 3
+    i32.const 5
     i32.const 1952
     call $~lib/rt/__allocArray
     call $~lib/rt/pure/__retain
     local.tee $0
-    call $~lib/array/Array<~lib/array/Array<i32>>#push
+    call $~lib/array/Array<~lib/array/Array<u32>>#push
     i32.const 0
     local.set $3
     loop $for-loop|1
@@ -2774,10 +2774,10 @@
      if
       local.get $4
       local.get $2
-      call $~lib/array/Array<~lib/array/Array<i32>>#__get
+      call $~lib/array/Array<~lib/array/Array<u32>>#__get
       local.tee $1
       i32.const 0
-      call $~lib/array/Array<i32>#push
+      call $~lib/array/Array<u32>#push
       local.get $1
       call $~lib/rt/pure/__release
       local.get $3
@@ -2807,7 +2807,7 @@
   local.set $3
   local.get $4
   i32.const 0
-  call $~lib/array/Array<~lib/array/Array<i32>>#__get
+  call $~lib/array/Array<~lib/array/Array<u32>>#__get
   local.tee $7
   i32.load offset=12
   i32.const 1
@@ -2832,7 +2832,7 @@
      if
       local.get $4
       local.get $2
-      call $~lib/array/Array<~lib/array/Array<i32>>#__get
+      call $~lib/array/Array<~lib/array/Array<u32>>#__get
       local.tee $6
       local.get $0
       i32.const 1
@@ -2857,7 +2857,7 @@
      if
       local.get $4
       local.get $0
-      call $~lib/array/Array<~lib/array/Array<i32>>#__get
+      call $~lib/array/Array<~lib/array/Array<u32>>#__get
       local.tee $6
       local.get $5
       i32.const 2
@@ -2886,7 +2886,7 @@
       if
        local.get $4
        local.get $3
-       call $~lib/array/Array<~lib/array/Array<i32>>#__get
+       call $~lib/array/Array<~lib/array/Array<u32>>#__get
        local.tee $6
        local.get $0
        i32.const 3
@@ -2916,7 +2916,7 @@
       if
        local.get $4
        local.get $0
-       call $~lib/array/Array<~lib/array/Array<i32>>#__get
+       call $~lib/array/Array<~lib/array/Array<u32>>#__get
        local.tee $6
        local.get $1
        i32.const 4
@@ -2974,7 +2974,7 @@
     local.set $0
     local.get $3
     local.get $4
-    call $~lib/array/Array<~lib/array/Array<i32>>#__get
+    call $~lib/array/Array<~lib/array/Array<u32>>#__get
     local.set $5
     i32.const 0
     local.set $2
@@ -2994,7 +2994,7 @@
            block $case0|2
             local.get $5
             local.get $2
-            call $~lib/array/Array<i32>#__get
+            call $~lib/array/Array<u32>#__get
             i32.const 1
             i32.sub
             br_table $case0|2 $case1|2 $case2|2 $case3|2 $case4|2
@@ -3063,7 +3063,7 @@
   loop $for-loop|0
    local.get $0
    i32.const 24
-   i32.lt_s
+   i32.lt_u
    if
     i32.const 3
     i32.const 1216
@@ -3075,11 +3075,11 @@
     loop $for-loop|1
      local.get $1
      i32.const 100
-     i32.lt_s
+     i32.lt_u
      if
       local.get $3
       local.get $1
-      f64.convert_i32_s
+      f64.convert_i32_u
       f64.const 100
       f64.div
       f64.const 3
@@ -3087,7 +3087,7 @@
       f64.const -2
       f64.add
       local.get $0
-      f64.convert_i32_s
+      f64.convert_i32_u
       f64.const 24
       f64.div
       f64.const 2
@@ -3095,7 +3095,7 @@
       f64.const -1
       f64.add
       call $assembly/wasi/mandelbrot/mandelbrotAtPoint
-      call $~lib/array/Array<i32>#push
+      call $~lib/array/Array<u32>#push
       local.get $1
       i32.const 1
       i32.add
@@ -3105,7 +3105,7 @@
     end
     local.get $2
     local.get $3
-    call $~lib/array/Array<~lib/array/Array<i32>>#push
+    call $~lib/array/Array<~lib/array/Array<u32>>#push
     local.get $3
     call $~lib/rt/pure/__release
     local.get $0
@@ -3128,8 +3128,6 @@
  (func $~lib/rt/pure/decrement (param $0 i32)
   (local $1 i32)
   (local $2 i32)
-  (local $3 i32)
-  (local $4 i32)
   local.get $0
   i32.load offset=4
   local.tee $2
@@ -3154,60 +3152,45 @@
   if
    block $__inlined_func$~lib/rt/__visit_members
     block $switch$1$default
-     block $switch$1$case$6
-      block $switch$1$case$5
-       block $switch$1$case$4
-        local.get $0
-        i32.const 8
-        i32.add
-        i32.load
-        br_table $__inlined_func$~lib/rt/__visit_members $__inlined_func$~lib/rt/__visit_members $switch$1$case$4 $switch$1$case$5 $switch$1$case$6 $__inlined_func$~lib/rt/__visit_members $__inlined_func$~lib/rt/__visit_members $switch$1$default
-       end
-       local.get $0
-       i32.load offset=16
-       local.tee $1
-       if
+     block $switch$1$case$10
+      block $switch$1$case$7
+       block $switch$1$case$6
+        block $switch$1$case$5
+         block $switch$1$case$4
+          local.get $0
+          i32.const 16
+          i32.add
+          local.tee $1
+          i32.const 8
+          i32.sub
+          i32.load
+          br_table $__inlined_func$~lib/rt/__visit_members $__inlined_func$~lib/rt/__visit_members $switch$1$case$4 $switch$1$case$5 $switch$1$case$6 $switch$1$case$7 $__inlined_func$~lib/rt/__visit_members $__inlined_func$~lib/rt/__visit_members $switch$1$case$10 $switch$1$default
+         end
+         local.get $1
+         i32.load
+         local.tee $1
+         if
+          local.get $1
+          call $~lib/rt/pure/__visit
+         end
+         br $__inlined_func$~lib/rt/__visit_members
+        end
         local.get $1
+        i32.load
         call $~lib/rt/pure/__visit
+        br $__inlined_func$~lib/rt/__visit_members
        end
+       local.get $1
+       call $~lib/array/Array<~lib/array/Array<u32>>#__visit_impl
        br $__inlined_func$~lib/rt/__visit_members
       end
-      local.get $0
-      i32.load offset=16
+      local.get $1
+      i32.load
       call $~lib/rt/pure/__visit
       br $__inlined_func$~lib/rt/__visit_members
      end
-     local.get $0
-     i32.load offset=20
-     local.tee $1
-     local.get $0
-     i32.load offset=28
-     i32.const 2
-     i32.shl
-     i32.add
-     local.set $3
-     loop $while-continue|0
-      local.get $1
-      local.get $3
-      i32.lt_u
-      if
-       local.get $1
-       i32.load
-       local.tee $4
-       if
-        local.get $4
-        call $~lib/rt/pure/__visit
-       end
-       local.get $1
-       i32.const 4
-       i32.add
-       local.set $1
-       br $while-continue|0
-      end
-     end
-     local.get $0
-     i32.load offset=16
-     call $~lib/rt/pure/__visit
+     local.get $1
+     call $~lib/array/Array<~lib/array/Array<u32>>#__visit_impl
      br $__inlined_func$~lib/rt/__visit_members
     end
     unreachable
@@ -3260,5 +3243,41 @@
   i32.const 16
   i32.sub
   call $~lib/rt/pure/decrement
+ )
+ (func $~lib/array/Array<~lib/array/Array<u32>>#__visit_impl (param $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  local.get $0
+  i32.load offset=4
+  local.tee $1
+  local.get $0
+  i32.load offset=12
+  i32.const 2
+  i32.shl
+  i32.add
+  local.set $2
+  loop $while-continue|0
+   local.get $1
+   local.get $2
+   i32.lt_u
+   if
+    local.get $1
+    i32.load
+    local.tee $3
+    if
+     local.get $3
+     call $~lib/rt/pure/__visit
+    end
+    local.get $1
+    i32.const 4
+    i32.add
+    local.set $1
+    br $while-continue|0
+   end
+  end
+  local.get $0
+  i32.load
+  call $~lib/rt/pure/__visit
  )
 )

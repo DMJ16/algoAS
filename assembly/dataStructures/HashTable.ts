@@ -39,7 +39,7 @@ export class HashTable {
     for (let i = 0; i < this.keyMap.length; i++) {
       if (this.keyMap[i]) {
         for (let j = 0; j < this.keyMap[i].length; j++) {
-          if (!keys.includes(this.keyMap[i][j][0])) {
+          if (keys.includes(this.keyMap[i][j][0]) === false) {
             keys.push(this.keyMap[i][j][0]);
           }
         }
@@ -53,7 +53,7 @@ export class HashTable {
     for (let i = 0; i < this.keyMap.length; i++) {
       if (this.keyMap[i]) {
         for (let j = 0; j < this.keyMap[i].length; j++) {
-          if (!values.includes(this.keyMap[i][j][1])) {
+          if (values.includes(this.keyMap[i][j][1]) === false) {
             values.push(this.keyMap[i][j][1]);
           }
         }

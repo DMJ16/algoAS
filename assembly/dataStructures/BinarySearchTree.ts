@@ -9,7 +9,7 @@ export class BST {
 
   insert(val: i32): this | null {
     const newNode = new TreeNode(val);
-    if (!this.root) {
+    if (this.root == null) {
       this.root = newNode;
       return this;
     }
@@ -17,13 +17,13 @@ export class BST {
     while (currentNode) {
       if (val === currentNode.val) return null;
       if (val < currentNode.val) {
-        if (!currentNode.left) {
+        if (currentNode.left == null) {
           currentNode.left = newNode;
           return this;
         }
         currentNode = currentNode.left;
       } else {
-        if (!currentNode.right) {
+        if (currentNode.right == null) {
           currentNode.right = newNode;
           return this;
         }
@@ -34,14 +34,14 @@ export class BST {
   }
 
   search(val: i32): boolean {
-    if (this.root === null) return false;
+    if (this.root == null) return false;
     let currentNode = this.root;
     while (currentNode) {
       if (val < currentNode.val) {
-        if (!currentNode.left) return false;
+        if (currentNode.left == null) return false;
         currentNode = currentNode.left;
       } else if (val > currentNode.val) {
-        if (!currentNode.right) return false;
+        if (currentNode.right == null) return false;
         currentNode = currentNode.right;
       } else {
         return true;
@@ -50,9 +50,9 @@ export class BST {
     return false;
   }
 
-  BFS(): i32[] | null {
+  bfs(): i32[] | null {
     let currentNode = this.root;
-    if (!currentNode) return null;
+    if (currentNode == null) return null;
     let data: i32[] = [];
     let queue: TreeNode[] = [];
 
@@ -74,18 +74,22 @@ export class BST {
     return data;
   }
 
-  invert(node: TreeNode | null): void {
-    if (node === null) return;
+  _invertHelper(node: TreeNode | null): void {
+    if (node == null) return;
     const left = node.left;
     node.left = node.right;
     node.right = left;
-    this.invert(node.left);
-    this.invert(node.right);
+    this._invertHelper(node.left);
+    this._invertHelper(node.right);
   }
 
-  DFSPreOrder(): i32[] | null {
+  invert(): void {
+    this._invertHelper(this.root);
+  }
+
+  dfsPreOrder(): i32[] | null {
     let currentNode = this.root;
-    if (!currentNode) return null;
+    if (currentNode == null) return null;
     const stack: TreeNode[] = [];
     const result: i32[] = [];
     stack.push(currentNode);
@@ -100,9 +104,9 @@ export class BST {
     return result;
   }
 
-  DFSInOrder(): i32[] | null {
+  dfsInOrder(): i32[] | null {
     let currentNode = this.root;
-    if (!currentNode) return null;
+    if (currentNode == null) return null;
     const stack: TreeNode[] = [];
     const result: i32[] = [];
     while (stack.length !== 0 || currentNode !== null) {
@@ -118,9 +122,9 @@ export class BST {
     return result;
   }
 
-  DFSPostOrder(): i32[] | null {
+  dfsPostOrder(): i32[] | null {
     let currentNode = this.root;
-    if (!currentNode) return null;
+    if (currentNode == null) return null;
     const stack: TreeNode[] = [];
     const result: i32[] = [];
     stack.push(currentNode);
@@ -133,5 +137,20 @@ export class BST {
       if (right) stack.push(right);
     }
     return result;
+  }
+
+  _maxDepthHelper(node: TreeNode | null): i32 {
+    if (node == null) return 0;
+    return (
+      i32(
+        Math.max(
+          this._maxDepthHelper(node.left),
+          this._maxDepthHelper(node.right)
+        )
+      ) + 1
+    );
+  }
+  maxDepth(): i32 {
+    return this._maxDepthHelper(this.root);
   }
 }

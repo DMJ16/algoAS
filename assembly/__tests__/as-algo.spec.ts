@@ -1,31 +1,43 @@
 import {
-  kadanesAlgo,
   spiralTraversal,
   isValidSubsequence,
   searchInSortedMatrix,
   riverSizes,
+  getPermutations,
+  mergeTwoSortedArrays,
 } from "../arrays";
 import {
   Node,
   Stack,
   Queue,
   LinkedList,
+  mergeTwoSortedLists,
   DoublyLinkedList,
   ListNode,
   HashTable,
+  LRUCache,
   BST,
   MaxBinaryHeap,
   PriorityQueue,
   Graph,
 } from "../dataStructures";
-import { levenshteinDistance } from "../dp";
 import {
-  fib,
-  factorial,
+  levenshteinDistance,
+  kadanesAlgo,
+  climbStairs,
+  climbStairsMemo,
+  fibIter,
+  fibMemo,
   fibExp,
+  factorialRecursive,
+  factorialIter,
   getPrimes,
   specialPythagoreanTriplet,
-} from "../math";
+  pascalsTriangle,
+  generatePascalsTriangle,
+  pascalsTriangle2,
+  pow,
+} from "../dp";
 import { binarySearch, kmpSearch } from "../search";
 import {
   bubbleSort,
@@ -38,14 +50,6 @@ import {
 } from "../sorting";
 
 describe("array algorithms", () => {
-  test("kadane's algorithm", () => {
-    expect(
-      kadanesAlgo([3, 5, -9, 1, 3, -2, 3, 4, 7, 2, -9, 6, 3, 1, -5, 4])
-    ).toBe(19);
-
-    expect(kadanesAlgo([-10, -2, -9, -4, -8, -6, -7, -1, -3, -5])).toBe(-1);
-  });
-
   test("spiral traversal", () => {
     expect(
       spiralTraversal([
@@ -139,6 +143,23 @@ describe("array algorithms", () => {
       ])
     ).toStrictEqual([]);
   });
+
+  test("getPermutations", () => {
+    expect(getPermutations([1, 2, 3])).toStrictEqual([
+      [1, 2, 3],
+      [2, 1, 3],
+      [3, 1, 2],
+      [1, 3, 2],
+      [2, 3, 1],
+      [3, 2, 1],
+    ]);
+  });
+
+  test("merge two sorted arrays in place", () => {
+    const result: i32[] = [1, 2, 3, 0, 0, 0];
+    mergeTwoSortedArrays(result, 3, [2, 5, 6], 3);
+    expect(result).toStrictEqual([1, 2, 2, 3, 5, 6]);
+  });
 });
 
 const stack: Stack<i32> = new Stack<i32>();
@@ -147,6 +168,7 @@ const list: LinkedList<i32> = new LinkedList<i32>();
 const dList: DoublyLinkedList<i32> = new DoublyLinkedList<i32>();
 const table: HashTable = new HashTable();
 const tree: BST = new BST();
+const cache: LRUCache = new LRUCache(4);
 const heap: MaxBinaryHeap = new MaxBinaryHeap();
 const PQ: PriorityQueue<string> = new PriorityQueue<string>();
 const graph: Graph = new Graph();
@@ -237,6 +259,23 @@ describe("data structures", () => {
       expect((list.shift() as Node<i32>).val).toBe(6);
       expect((list.shift() as Node<i32>).val).toBe(50000);
     });
+
+    test("merge two sorted LinkedLists", () => {
+      const testArr: i32[] = [];
+      const list1: Node<i32> | null = new Node<i32>(1);
+      list1!.next = new Node<i32>(2);
+      list1!.next!.next = new Node<i32>(4);
+      const list2: Node<i32> | null = new Node<i32>(1);
+      list2!.next = new Node<i32>(3);
+      list2!.next!.next = new Node<i32>(4);
+
+      let mergedList = mergeTwoSortedLists(list1, list2);
+      while (mergedList) {
+        testArr.push(mergedList.val);
+        mergedList = mergedList.next;
+      }
+      expect(testArr).toStrictEqual([1, 1, 2, 3, 4, 4]);
+    });
   });
 
   describe("DoublyLinkedList", () => {
@@ -320,6 +359,37 @@ describe("data structures", () => {
     });
   });
 
+  describe("LRUCache", () => {
+    test("insert key-value pairs in cache", () => {
+      cache.insertKeyValuePair("a", 1);
+      expect(cache.currentSize).toBe(1);
+      cache.insertKeyValuePair("b", 2);
+      expect(cache.currentSize).toBe(2);
+      cache.insertKeyValuePair("c", 3);
+      expect(cache.currentSize).toBe(3);
+      cache.insertKeyValuePair("d", 4);
+      expect(cache.currentSize).toBe(4);
+    });
+
+    test("get values by key lookup", () => {
+      expect(cache.getValueFromKey("a")).toBe(1);
+      expect(cache.getValueFromKey("b")).toBe(2);
+      expect(cache.getValueFromKey("c")).toBe(3);
+      expect(cache.getValueFromKey("d")).toBe(4);
+    });
+
+    test("get values by key lookup", () => {
+      cache.insertKeyValuePair("e", 5);
+      expect((): void => {
+        cache.getValueFromKey("a");
+      }).toThrow();
+      expect(cache.getValueFromKey("b")).toBe(2);
+      expect(cache.getValueFromKey("c")).toBe(3);
+      expect(cache.getValueFromKey("d")).toBe(4);
+      expect(cache.getValueFromKey("e")).toBe(5);
+    });
+  });
+
   describe("BinarySearchTree", () => {
     test("insert nodes and find by search", () => {
       tree.insert(100);
@@ -328,35 +398,70 @@ describe("data structures", () => {
       tree.insert(300);
       tree.insert(20);
       tree.insert(5);
+      tree.insert(40);
+      tree.insert(800);
       expect(tree.search(100)).toBe(true);
       expect(tree.search(1)).toBe(true);
       expect(tree.search(600)).toBe(true);
       expect(tree.search(300)).toBe(true);
       expect(tree.search(20)).toBe(true);
       expect(tree.search(5)).toBe(true);
+      expect(tree.search(40)).toBe(true);
+      expect(tree.search(800)).toBe(true);
       expect(tree.search(500)).toBe(false);
       expect(tree.search(0)).toBe(false);
     });
 
     test("BFS traversal", () => {
-      expect(tree.BFS()).toStrictEqual([100, 1, 600, 20, 300, 5]);
+      expect(tree.bfs()).toStrictEqual([100, 1, 600, 20, 300, 800, 5, 40]);
     });
 
     test("DFS PreOrder traversal", () => {
-      expect(tree.DFSPreOrder()).toStrictEqual([100, 1, 20, 5, 600, 300]);
+      expect(tree.dfsPreOrder()).toStrictEqual([
+        100,
+        1,
+        20,
+        5,
+        40,
+        600,
+        300,
+        800,
+      ]);
     });
 
     test("DFS InOrder traversal", () => {
-      expect(tree.DFSInOrder()).toStrictEqual([1, 5, 20, 100, 300, 600]);
+      expect(tree.dfsInOrder()).toStrictEqual([
+        1,
+        5,
+        20,
+        40,
+        100,
+        300,
+        600,
+        800,
+      ]);
     });
 
     test("DFS PostOrder traversal", () => {
-      expect(tree.DFSPostOrder()).toStrictEqual([5, 20, 1, 300, 600, 100]);
+      expect(tree.dfsPostOrder()).toStrictEqual([
+        5,
+        40,
+        20,
+        1,
+        300,
+        800,
+        600,
+        100,
+      ]);
     });
 
     test("invert BST", () => {
-      tree.invert(tree.root);
-      expect(tree.BFS()).toStrictEqual([100, 600, 1, 300, 20, 5]);
+      tree.invert();
+      expect(tree.bfs()).toStrictEqual([100, 600, 1, 800, 300, 20, 40, 5]);
+    });
+
+    test("find max depth", () => {
+      expect(tree.maxDepth()).toBe(4);
     });
   });
 
@@ -408,8 +513,8 @@ describe("data structures", () => {
       graph.addVertex("C");
       graph.addVertex("D");
       graph.addVertex("E");
-      graph.addVertex("F");
-      expect(graph.adjList.keys().length).toBe(6);
+      expect(graph.addVertex("F")).toBe(6);
+      // expect(graph.adjList.keys().length).toBe(6);
     });
 
     test("add edges", () => {
@@ -421,6 +526,9 @@ describe("data structures", () => {
       graph.addEdge("D", "E", 3);
       graph.addEdge("D", "F", 1);
       graph.addEdge("E", "F", 1);
+      expect((): void => {
+        graph.addEdge("X", "Y", 1);
+      }).toThrow("unreachable vertices");
       expect(graph.adjList.get("A").length).toBe(2);
       expect(graph.adjList.get("B").length).toBe(2);
       expect(graph.adjList.get("E").length).toBe(3);
@@ -476,6 +584,9 @@ describe("data structures", () => {
       graph.removeEdge("D", "E");
       graph.removeEdge("D", "F");
       graph.removeEdge("E", "F");
+      expect((): void => {
+        graph.removeEdge("X", "Y");
+      }).toThrow("unreachable vertices");
       expect(graph.adjList.get("A").length).toBe(0);
       expect(graph.adjList.get("B").length).toBe(0);
       expect(graph.adjList.get("E").length).toBe(0);
@@ -485,12 +596,12 @@ describe("data structures", () => {
     });
 
     test("remove vertices and edges", () => {
-      graph.removeVertex("A");
-      graph.removeVertex("B");
-      graph.removeVertex("C");
-      graph.removeVertex("D");
-      graph.removeVertex("E");
-      expect(graph.removeVertex("F")).toBe(0);
+      expect(graph.removeVertex("A")).toBe(true);
+      expect(graph.removeVertex("B")).toBe(true);
+      expect(graph.removeVertex("C")).toBe(true);
+      expect(graph.removeVertex("D")).toBe(true);
+      expect(graph.removeVertex("E")).toBe(true);
+      expect(graph.removeVertex("X")).toBe(false);
     });
   });
 });
@@ -503,27 +614,79 @@ describe("dynamic programming", () => {
     expect(levenshteinDistance("abc", "xyz")).toBe(3);
     expect(levenshteinDistance("horse", "ros")).toBe(3);
   });
-});
 
-describe("math algorithms", () => {
-  test("factorials", () => {
-    expect(factorial(1)).toBe(1);
-    expect(factorial(2)).toBe(2);
-    expect(factorial(3)).toBe(6);
-    expect(factorial(4)).toBe(24);
-    expect(factorial(5)).toBe(120);
-    expect(factorial(6)).toBe(720);
+  test("kadane's algorithm", () => {
+    expect(
+      kadanesAlgo([3, 5, -9, 1, 3, -2, 3, 4, 7, 2, -9, 6, 3, 1, -5, 4])
+    ).toBe(19);
+
+    expect(kadanesAlgo([-10, -2, -9, -4, -8, -6, -7, -1, -3, -5])).toBe(-1);
+  });
+
+  test("climbStairs", () => {
+    expect(climbStairs(0)).toBe(0);
+    expect(climbStairs(1)).toBe(1);
+    expect(climbStairs(2)).toBe(1);
+    expect(climbStairs(3)).toBe(2);
+    expect(climbStairs(4)).toBe(3);
+    expect(climbStairs(5)).toBe(5);
+    expect(climbStairs(6)).toBe(8);
+    expect(climbStairs(7)).toBe(13);
+  });
+
+  test("climbStairsMemo", () => {
+    expect(climbStairsMemo(0)).toBe(0);
+    expect(climbStairsMemo(1)).toBe(1);
+    expect(climbStairsMemo(2)).toBe(1);
+    expect(climbStairsMemo(3)).toBe(2);
+    expect(climbStairsMemo(4)).toBe(3);
+    expect(climbStairsMemo(5)).toBe(5);
+    expect(climbStairsMemo(6)).toBe(8);
+    expect(climbStairsMemo(7)).toBe(13);
+  });
+
+  test("factorial function recursive solution", () => {
+    expect(factorialRecursive(-1)).toBe(1);
+    expect(factorialRecursive(0)).toBe(1);
+    expect(factorialRecursive(1)).toBe(1);
+    expect(factorialRecursive(2)).toBe(2);
+    expect(factorialRecursive(3)).toBe(6);
+    expect(factorialRecursive(4)).toBe(24);
+    expect(factorialRecursive(5)).toBe(120);
+    expect(factorialRecursive(6)).toBe(720);
+  });
+
+  test("factorial function iterative solution", () => {
+    expect(factorialIter(-1)).toBe(1);
+    expect(factorialIter(0)).toBe(1);
+    expect(factorialIter(1)).toBe(1);
+    expect(factorialIter(2)).toBe(2);
+    expect(factorialIter(3)).toBe(6);
+    expect(factorialIter(4)).toBe(24);
+    expect(factorialIter(5)).toBe(120);
+    expect(factorialIter(6)).toBe(720);
   });
 
   test("get nth fib iterative", () => {
-    expect(fib(0)).toBe(0);
-    expect(fib(1)).toBe(1);
-    expect(fib(2)).toBe(1);
-    expect(fib(3)).toBe(2);
-    expect(fib(4)).toBe(3);
-    expect(fib(5)).toBe(5);
-    expect(fib(6)).toBe(8);
-    expect(fib(7)).toBe(13);
+    expect(fibIter(0)).toBe(0);
+    expect(fibIter(1)).toBe(1);
+    expect(fibIter(2)).toBe(1);
+    expect(fibIter(3)).toBe(2);
+    expect(fibIter(4)).toBe(3);
+    expect(fibIter(5)).toBe(5);
+    expect(fibIter(6)).toBe(8);
+    expect(fibIter(7)).toBe(13);
+  });
+
+  test("get nth fib recursive with memoization", () => {
+    expect(fibMemo(0)).toBe(0);
+    expect(fibMemo(1)).toBe(1);
+    expect(fibMemo(2)).toBe(1);
+    expect(fibMemo(3)).toBe(2);
+    expect(fibMemo(4)).toBe(3);
+    expect(fibMemo(5)).toBe(5);
+    expect(fibMemo(6)).toBe(8);
+    expect(fibMemo(7)).toBe(13);
   });
 
   test("get nth fib exponential", () => {
@@ -561,6 +724,32 @@ describe("math algorithms", () => {
 
   test("special pythagorean triplet where a + b + c === 1000", () => {
     expect(specialPythagoreanTriplet()).toBe(31875000);
+  });
+
+  test("pascal's triangle", () => {
+    expect(pascalsTriangle(1, 1)).toBe(1);
+    expect(pascalsTriangle(3, 2)).toBe(2);
+    expect(pascalsTriangle(5, 3)).toBe(6);
+  });
+
+  test("generate pascal's triangle", () => {
+    expect(generatePascalsTriangle(1)).toStrictEqual([[1]]);
+    expect(generatePascalsTriangle(2)).toStrictEqual([[1], [1, 1]]);
+    expect(generatePascalsTriangle(3)).toStrictEqual([[1], [1, 1], [1, 2, 1]]);
+  });
+
+  test("pascal's triangle 2", () => {
+    expect(pascalsTriangle2(0)).toStrictEqual([1]);
+    expect(pascalsTriangle2(1)).toStrictEqual([1, 1]);
+    expect(pascalsTriangle2(2)).toStrictEqual([1, 2, 1]);
+    expect(pascalsTriangle2(3)).toStrictEqual([1, 3, 3, 1]);
+  });
+
+  test("return x to the nth power", () => {
+    expect(pow(2, 0)).toBe(1);
+    expect(pow(2, 1)).toBe(2);
+    expect(pow(2, 2)).toBe(4);
+    expect(pow(2, 7)).toBe(128);
   });
 });
 

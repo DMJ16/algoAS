@@ -2,25 +2,25 @@ import "wasi";
 import { Console } from "as-wasi";
 
 export function mandelbrot(): void {
-  const mandelbrot = calculateMandelbrot(1000, -2.0, 1.0, -1.0, 1.0, 100, 24);
+  const mandelbrot = calculateMandelbrot(-2.0, 1.0, -1.0, 1.0, 100, 24, 1000);
   renderMandelbrot(mandelbrot);
 }
 
 function calculateMandelbrot(
-  maxIters: i32,
   xMin: f64,
   xMax: f64,
   yMin: f64,
   yMax: f64,
-  width: i32,
-  height: i32
-): i32[][] {
-  const allRows: i32[][] = [];
-  for (let i = 0; i < height; i++) {
-    const row: i32[] = [];
-    for (let j = 0; j < width; j++) {
-      const cx = xMin + (xMax - xMin) * (((j as f64) / width) as f64);
-      const cy = yMin + (yMax - yMin) * (((i as f64) / height) as f64);
+  width: u32,
+  height: u32,
+  maxIters: u32
+): u32[][] {
+  const allRows: u32[][] = [];
+  for (let i: u32 = 0; i < height; i++) {
+    const row: u32[] = [];
+    for (let j: u32 = 0; j < width; j++) {
+      const cx = xMin + (xMax - xMin) * (f64(j) / width);
+      const cy = yMin + (yMax - yMin) * (f64(i) / height);
       const escapedAt = mandelbrotAtPoint(cx, cy, maxIters);
       row.push(escapedAt);
     }
@@ -39,13 +39,13 @@ class Complex {
 
   mult(multiplier: Complex): Complex {
     return new Complex(
-      (this.re * multiplier.re - this.im * multiplier.im) as f64,
-      (this.re * multiplier.im + this.im * multiplier.re) as f64
+      this.re * multiplier.re - this.im * multiplier.im,
+      this.re * multiplier.im + this.im * multiplier.re
     );
   }
 
   add(num: Complex): Complex {
-    return new Complex((this.re + num.re) as f64, (this.im + num.im) as f64);
+    return new Complex(this.re + num.re, this.im + num.im);
   }
 
   norm(): f64 {
@@ -53,17 +53,17 @@ class Complex {
   }
 }
 
-function mandelbrotAtPoint(cx: f64, cy: f64, maxIters: i32): i32 {
+function mandelbrotAtPoint(cx: f64, cy: f64, maxIters: u32): u32 {
   let z = new Complex(0.0, 0.0);
   let c = new Complex(cx, cy);
-  for (let i = 0; i <= maxIters; i++) {
+  for (let i: u32 = 0; i <= maxIters; i++) {
     if (z.norm() > 2.0) return i;
     z = z.mult(z).add(c);
   }
   return maxIters;
 }
 
-function renderMandelbrot(escapeVals: i32[][]): void {
+function renderMandelbrot(escapeVals: u32[][]): void {
   for (let i = 0; i < escapeVals.length; i++) {
     let line = "";
     const row = escapeVals[i];
