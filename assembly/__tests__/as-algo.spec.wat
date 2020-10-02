@@ -342,119 +342,121 @@
  (data (i32.const 13920) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00D")
  (data (i32.const 13952) "J\00\00\00\01\00\00\00\01\00\00\00J\00\00\00f\00a\00c\00t\00o\00r\00i\00a\00l\00 \00f\00u\00n\00c\00t\00i\00o\00n\00 \00i\00t\00e\00r\00a\00t\00i\00v\00e\00 \00s\00o\00l\00u\00t\00i\00o\00n")
  (data (i32.const 14048) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00E")
- (data (i32.const 14080) "*\00\00\00\01\00\00\00\01\00\00\00*\00\00\00g\00e\00t\00 \00n\00t\00h\00 \00f\00i\00b\00 \00i\00t\00e\00r\00a\00t\00i\00v\00e")
+ (data (i32.const 14080) "*\00\00\00\01\00\00\00\01\00\00\00*\00\00\00g\00e\00t\00 \00n\00t\00h\00 \00f\00i\00b\00 \00r\00e\00c\00u\00r\00s\00i\00v\00e")
  (data (i32.const 14144) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00F")
- (data (i32.const 14176) "L\00\00\00\01\00\00\00\01\00\00\00L\00\00\00g\00e\00t\00 \00n\00t\00h\00 \00f\00i\00b\00 \00r\00e\00c\00u\00r\00s\00i\00v\00e\00 \00w\00i\00t\00h\00 \00m\00e\00m\00o\00i\00z\00a\00t\00i\00o\00n")
- (data (i32.const 14272) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00G")
- (data (i32.const 14304) ".\00\00\00\01\00\00\00\01\00\00\00.\00\00\00g\00e\00t\00 \00n\00t\00h\00 \00f\00i\00b\00 \00e\00x\00p\00o\00n\00e\00n\00t\00i\00a\00l")
+ (data (i32.const 14176) "*\00\00\00\01\00\00\00\01\00\00\00*\00\00\00g\00e\00t\00 \00n\00t\00h\00 \00f\00i\00b\00 \00i\00t\00e\00r\00a\00t\00i\00v\00e")
+ (data (i32.const 14240) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00G")
+ (data (i32.const 14272) "L\00\00\00\01\00\00\00\01\00\00\00L\00\00\00g\00e\00t\00 \00n\00t\00h\00 \00f\00i\00b\00 \00r\00e\00c\00u\00r\00s\00i\00v\00e\00 \00w\00i\00t\00h\00 \00m\00e\00m\00o\00i\00z\00a\00t\00i\00o\00n")
  (data (i32.const 14368) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00H")
- (data (i32.const 14400) "\14\00\00\00\01\00\00\00\01\00\00\00\14\00\00\00g\00e\00t\00 \00p\00r\00i\00m\00e\00s")
- (data (i32.const 14448) "\08\00\00\00\01\00\00\004\00\00\00\08\00\00\00I")
- (data (i32.const 14480) "\08\00\00\00\01\00\00\005\00\00\00\08\00\00\00J")
- (data (i32.const 14512) "\0c\00\00\00\01\00\00\00\00\00\00\00\0c\00\00\00\02\00\00\00\03\00\00\00\05")
- (data (i32.const 14544) " \00\00\00\01\00\00\00\00\00\00\00 \00\00\00\02\00\00\00\03\00\00\00\05\00\00\00\07\00\00\00\0b\00\00\00\0d\00\00\00\11\00\00\00\13")
- (data (i32.const 14592) "<\00\00\00\01\00\00\00\00\00\00\00<\00\00\00\02\00\00\00\03\00\00\00\05\00\00\00\07\00\00\00\0b\00\00\00\0d\00\00\00\11\00\00\00\13\00\00\00\17\00\00\00\1d\00\00\00\1f\00\00\00%\00\00\00)\00\00\00+\00\00\00/")
- (data (i32.const 14672) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00K")
- (data (i32.const 14704) "h\00\00\00\01\00\00\00\01\00\00\00h\00\00\00s\00p\00e\00c\00i\00a\00l\00 \00p\00y\00t\00h\00a\00g\00o\00r\00e\00a\00n\00 \00t\00r\00i\00p\00l\00e\00t\00 \00w\00h\00e\00r\00e\00 \00a\00 \00+\00 \00b\00 \00+\00 \00c\00 \00=\00=\00=\00 \001\000\000\000")
- (data (i32.const 14832) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00L")
- (data (i32.const 14864) "\"\00\00\00\01\00\00\00\01\00\00\00\"\00\00\00p\00a\00s\00c\00a\00l\00\'\00s\00 \00t\00r\00i\00a\00n\00g\00l\00e")
+ (data (i32.const 14400) ".\00\00\00\01\00\00\00\01\00\00\00.\00\00\00g\00e\00t\00 \00n\00t\00h\00 \00f\00i\00b\00 \00e\00x\00p\00o\00n\00e\00n\00t\00i\00a\00l")
+ (data (i32.const 14464) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00I")
+ (data (i32.const 14496) "\14\00\00\00\01\00\00\00\01\00\00\00\14\00\00\00g\00e\00t\00 \00p\00r\00i\00m\00e\00s")
+ (data (i32.const 14544) "\08\00\00\00\01\00\00\004\00\00\00\08\00\00\00J")
+ (data (i32.const 14576) "\08\00\00\00\01\00\00\005\00\00\00\08\00\00\00K")
+ (data (i32.const 14608) "\0c\00\00\00\01\00\00\00\00\00\00\00\0c\00\00\00\02\00\00\00\03\00\00\00\05")
+ (data (i32.const 14640) " \00\00\00\01\00\00\00\00\00\00\00 \00\00\00\02\00\00\00\03\00\00\00\05\00\00\00\07\00\00\00\0b\00\00\00\0d\00\00\00\11\00\00\00\13")
+ (data (i32.const 14688) "<\00\00\00\01\00\00\00\00\00\00\00<\00\00\00\02\00\00\00\03\00\00\00\05\00\00\00\07\00\00\00\0b\00\00\00\0d\00\00\00\11\00\00\00\13\00\00\00\17\00\00\00\1d\00\00\00\1f\00\00\00%\00\00\00)\00\00\00+\00\00\00/")
+ (data (i32.const 14768) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00L")
+ (data (i32.const 14800) "h\00\00\00\01\00\00\00\01\00\00\00h\00\00\00s\00p\00e\00c\00i\00a\00l\00 \00p\00y\00t\00h\00a\00g\00o\00r\00e\00a\00n\00 \00t\00r\00i\00p\00l\00e\00t\00 \00w\00h\00e\00r\00e\00 \00a\00 \00+\00 \00b\00 \00+\00 \00c\00 \00=\00=\00=\00 \001\000\000\000")
  (data (i32.const 14928) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00M")
- (data (i32.const 14960) "4\00\00\00\01\00\00\00\01\00\00\004\00\00\00g\00e\00n\00e\00r\00a\00t\00e\00 \00p\00a\00s\00c\00a\00l\00\'\00s\00 \00t\00r\00i\00a\00n\00g\00l\00e")
- (data (i32.const 15044) "\01")
- (data (i32.const 15060) "\01")
- (data (i32.const 15072) "\04\00\00\00\01\00\00\00\00\00\00\00\04\00\00\00\01")
- (data (i32.const 15104) "\04\00\00\00\01\00\00\00\00\00\00\00\04\00\00\00\01")
- (data (i32.const 15136) "\08\00\00\00\01\00\00\00\00\00\00\00\08\00\00\00\01\00\00\00\01")
+ (data (i32.const 14960) "\"\00\00\00\01\00\00\00\01\00\00\00\"\00\00\00p\00a\00s\00c\00a\00l\00\'\00s\00 \00t\00r\00i\00a\00n\00g\00l\00e")
+ (data (i32.const 15024) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00N")
+ (data (i32.const 15056) "4\00\00\00\01\00\00\00\01\00\00\004\00\00\00g\00e\00n\00e\00r\00a\00t\00e\00 \00p\00a\00s\00c\00a\00l\00\'\00s\00 \00t\00r\00i\00a\00n\00g\00l\00e")
+ (data (i32.const 15140) "\01")
+ (data (i32.const 15156) "\01")
  (data (i32.const 15168) "\04\00\00\00\01\00\00\00\00\00\00\00\04\00\00\00\01")
- (data (i32.const 15200) "\08\00\00\00\01\00\00\00\00\00\00\00\08\00\00\00\01\00\00\00\01")
- (data (i32.const 15232) "\0c\00\00\00\01\00\00\00\00\00\00\00\0c\00\00\00\01\00\00\00\02\00\00\00\01")
- (data (i32.const 15264) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00N")
- (data (i32.const 15296) "&\00\00\00\01\00\00\00\01\00\00\00&\00\00\00p\00a\00s\00c\00a\00l\00\'\00s\00 \00t\00r\00i\00a\00n\00g\00l\00e\00 \002")
- (data (i32.const 15360) "\04\00\00\00\01\00\00\00\00\00\00\00\04\00\00\00\01")
- (data (i32.const 15392) "\04\00\00\00\01\00\00\00\00\00\00\00\04\00\00\00\01")
- (data (i32.const 15424) "\08\00\00\00\01\00\00\00\00\00\00\00\08\00\00\00\01\00\00\00\01")
- (data (i32.const 15456) "\0c\00\00\00\01\00\00\00\00\00\00\00\0c\00\00\00\01\00\00\00\02\00\00\00\01")
- (data (i32.const 15488) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00\01\00\00\00\03\00\00\00\03\00\00\00\01")
- (data (i32.const 15520) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00O")
- (data (i32.const 15552) "2\00\00\00\01\00\00\00\01\00\00\002\00\00\00r\00e\00t\00u\00r\00n\00 \00x\00 \00t\00o\00 \00t\00h\00e\00 \00n\00t\00h\00 \00p\00o\00w\00e\00r")
- (data (i32.const 15632) "\06\00\00\00\01\00\00\00\01\00\00\00\06\00\00\00f\006\004")
- (data (i32.const 15664) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00P")
- (data (i32.const 15696) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00Q")
- (data (i32.const 15728) "\"\00\00\00\01\00\00\00\01\00\00\00\"\00\00\00s\00e\00a\00r\00c\00h\00 \00a\00l\00g\00o\00r\00i\00t\00h\00m\00s")
- (data (i32.const 15792) "4\00\00\00\01\00\00\00\01\00\00\004\00\00\00K\00n\00u\00t\00h\00M\00o\00r\00r\00i\00s\00P\00r\00a\00t\00t\00 \00a\00l\00g\00o\00r\00i\00t\00h\00m")
- (data (i32.const 15872) "8\00\00\00\01\00\00\00\01\00\00\008\00\00\00h\00a\00n\00n\00a\00h\00h\00a\00h\00h\00a\00h\00a\00h\00a\00h\00h\00a\00h\00a\00h\00a\00h\00a\00n\00n\00a\00h")
- (data (i32.const 15952) "\0c\00\00\00\01\00\00\00\01\00\00\00\0c\00\00\00h\00a\00n\00n\00a\00h")
- (data (i32.const 15984) "\08\00\00\00\01\00\00\00\01\00\00\00\08\00\00\00d\00s\00d\00s")
- (data (i32.const 16016) "\04\00\00\00\01\00\00\00\01\00\00\00\04\00\00\00h\00a")
- (data (i32.const 16048) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00R")
- (data (i32.const 16080) "\18\00\00\00\01\00\00\00\01\00\00\00\18\00\00\00b\00i\00n\00a\00r\00y\00S\00e\00a\00r\00c\00h")
- (data (i32.const 16128) "\14\00\00\00\01\00\00\00\00\00\00\00\14\00\00\00\01\00\00\00\02\00\00\00:\00\00\00c\00\00\00d")
- (data (i32.const 16176) " \00\00\00\01\00\00\00\00\00\00\00 \00\00\00\02\00\00\00\05\00\00\00\06\00\00\00\t\00\00\00\0d\00\00\00\0f\00\00\00\1c\00\00\00\1e")
- (data (i32.const 16224) " \00\00\00\01\00\00\00\00\00\00\00 \00\00\00\02\00\00\00\05\00\00\00\06\00\00\00\t\00\00\00\0d\00\00\00\0f\00\00\00\1c\00\00\00\1e")
+ (data (i32.const 15200) "\04\00\00\00\01\00\00\00\00\00\00\00\04\00\00\00\01")
+ (data (i32.const 15232) "\08\00\00\00\01\00\00\00\00\00\00\00\08\00\00\00\01\00\00\00\01")
+ (data (i32.const 15264) "\04\00\00\00\01\00\00\00\00\00\00\00\04\00\00\00\01")
+ (data (i32.const 15296) "\08\00\00\00\01\00\00\00\00\00\00\00\08\00\00\00\01\00\00\00\01")
+ (data (i32.const 15328) "\0c\00\00\00\01\00\00\00\00\00\00\00\0c\00\00\00\01\00\00\00\02\00\00\00\01")
+ (data (i32.const 15360) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00O")
+ (data (i32.const 15392) "&\00\00\00\01\00\00\00\01\00\00\00&\00\00\00p\00a\00s\00c\00a\00l\00\'\00s\00 \00t\00r\00i\00a\00n\00g\00l\00e\00 \002")
+ (data (i32.const 15456) "\04\00\00\00\01\00\00\00\00\00\00\00\04\00\00\00\01")
+ (data (i32.const 15488) "\04\00\00\00\01\00\00\00\00\00\00\00\04\00\00\00\01")
+ (data (i32.const 15520) "\08\00\00\00\01\00\00\00\00\00\00\00\08\00\00\00\01\00\00\00\01")
+ (data (i32.const 15552) "\0c\00\00\00\01\00\00\00\00\00\00\00\0c\00\00\00\01\00\00\00\02\00\00\00\01")
+ (data (i32.const 15584) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00\01\00\00\00\03\00\00\00\03\00\00\00\01")
+ (data (i32.const 15616) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00P")
+ (data (i32.const 15648) "2\00\00\00\01\00\00\00\01\00\00\002\00\00\00r\00e\00t\00u\00r\00n\00 \00x\00 \00t\00o\00 \00t\00h\00e\00 \00n\00t\00h\00 \00p\00o\00w\00e\00r")
+ (data (i32.const 15728) "\06\00\00\00\01\00\00\00\01\00\00\00\06\00\00\00f\006\004")
+ (data (i32.const 15760) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00Q")
+ (data (i32.const 15792) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00R")
+ (data (i32.const 15824) "\"\00\00\00\01\00\00\00\01\00\00\00\"\00\00\00s\00e\00a\00r\00c\00h\00 \00a\00l\00g\00o\00r\00i\00t\00h\00m\00s")
+ (data (i32.const 15888) "4\00\00\00\01\00\00\00\01\00\00\004\00\00\00K\00n\00u\00t\00h\00M\00o\00r\00r\00i\00s\00P\00r\00a\00t\00t\00 \00a\00l\00g\00o\00r\00i\00t\00h\00m")
+ (data (i32.const 15968) "8\00\00\00\01\00\00\00\01\00\00\008\00\00\00h\00a\00n\00n\00a\00h\00h\00a\00h\00h\00a\00h\00a\00h\00a\00h\00h\00a\00h\00a\00h\00a\00h\00a\00n\00n\00a\00h")
+ (data (i32.const 16048) "\0c\00\00\00\01\00\00\00\01\00\00\00\0c\00\00\00h\00a\00n\00n\00a\00h")
+ (data (i32.const 16080) "\08\00\00\00\01\00\00\00\01\00\00\00\08\00\00\00d\00s\00d\00s")
+ (data (i32.const 16112) "\04\00\00\00\01\00\00\00\01\00\00\00\04\00\00\00h\00a")
+ (data (i32.const 16144) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00S")
+ (data (i32.const 16176) "\18\00\00\00\01\00\00\00\01\00\00\00\18\00\00\00b\00i\00n\00a\00r\00y\00S\00e\00a\00r\00c\00h")
+ (data (i32.const 16224) "\14\00\00\00\01\00\00\00\00\00\00\00\14\00\00\00\01\00\00\00\02\00\00\00:\00\00\00c\00\00\00d")
  (data (i32.const 16272) " \00\00\00\01\00\00\00\00\00\00\00 \00\00\00\02\00\00\00\05\00\00\00\06\00\00\00\t\00\00\00\0d\00\00\00\0f\00\00\00\1c\00\00\00\1e")
- (data (i32.const 16320) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00S")
- (data (i32.const 16352) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00T")
- (data (i32.const 16384) "$\00\00\00\01\00\00\00\01\00\00\00$\00\00\00s\00o\00r\00t\00i\00n\00g\00 \00a\00l\00g\00o\00r\00i\00t\00h\00m\00s")
- (data (i32.const 16448) "\14\00\00\00\01\00\00\00\01\00\00\00\14\00\00\00b\00u\00b\00b\00l\00e\00S\00o\00r\00t")
- (data (i32.const 16496) "\1c\00\00\00\01\00\00\00\00\00\00\00\1c\00\00\00\08\00\00\00\05\00\00\00\02\00\00\00\t\00\00\00\05\00\00\00\06\00\00\00\03")
- (data (i32.const 16544) "\1c\00\00\00\01\00\00\00\00\00\00\00\1c\00\00\00\02\00\00\00\03\00\00\00\05\00\00\00\05\00\00\00\06\00\00\00\08\00\00\00\t")
- (data (i32.const 16592) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00U")
- (data (i32.const 16624) "\1a\00\00\00\01\00\00\00\01\00\00\00\1a\00\00\00i\00n\00s\00e\00r\00t\00i\00o\00n\00S\00o\00r\00t")
- (data (i32.const 16672) "\1c\00\00\00\01\00\00\00\00\00\00\00\1c\00\00\00\08\00\00\00\05\00\00\00\02\00\00\00\t\00\00\00\05\00\00\00\06\00\00\00\03")
- (data (i32.const 16720) "\1c\00\00\00\01\00\00\00\00\00\00\00\1c\00\00\00\02\00\00\00\03\00\00\00\05\00\00\00\05\00\00\00\06\00\00\00\08\00\00\00\t")
- (data (i32.const 16768) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00V")
- (data (i32.const 16800) "\1a\00\00\00\01\00\00\00\01\00\00\00\1a\00\00\00s\00e\00l\00e\00c\00t\00i\00o\00n\00S\00o\00r\00t")
- (data (i32.const 16848) "\1c\00\00\00\01\00\00\00\00\00\00\00\1c\00\00\00\08\00\00\00\05\00\00\00\02\00\00\00\t\00\00\00\05\00\00\00\06\00\00\00\03")
- (data (i32.const 16896) "\1c\00\00\00\01\00\00\00\00\00\00\00\1c\00\00\00\02\00\00\00\03\00\00\00\05\00\00\00\05\00\00\00\06\00\00\00\08\00\00\00\t")
- (data (i32.const 16944) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00W")
- (data (i32.const 16976) "\12\00\00\00\01\00\00\00\01\00\00\00\12\00\00\00q\00u\00i\00c\00k\00S\00o\00r\00t")
- (data (i32.const 17024) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00d\00\00\00\c8\00\00\00,\01\00\00\90\01")
- (data (i32.const 17056) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00d\00\00\00\c8\00\00\00,\01\00\00\90\01")
- (data (i32.const 17088) "\18\00\00\00\01\00\00\00\00\00\00\00\18\00\00\00\fd\ff\ff\ff\04\00\00\00\00\00\00\00\fe\ff\ff\ff\06\00\00\00\ff\ff\ff\ff")
- (data (i32.const 17136) "\18\00\00\00\01\00\00\00\00\00\00\00\18\00\00\00\fd\ff\ff\ff\fe\ff\ff\ff\ff\ff\ff\ff\00\00\00\00\04\00\00\00\06")
- (data (i32.const 17184) "$\00\00\00\01\00\00\00\00\00\00\00$\00\00\00\01\00\00\00\04\00\00\00\02\00\00\00\n\00\00\00\17\00\00\00\03\00\00\00\01\00\00\00\00\00\00\00\14")
- (data (i32.const 17248) "$\00\00\00\01\00\00\00\00\00\00\00$\00\00\00\00\00\00\00\01\00\00\00\01\00\00\00\02\00\00\00\03\00\00\00\04\00\00\00\n\00\00\00\14\00\00\00\17")
- (data (i32.const 17312) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00X")
- (data (i32.const 17344) "\12\00\00\00\01\00\00\00\01\00\00\00\12\00\00\00m\00e\00r\00g\00e\00S\00o\00r\00t")
- (data (i32.const 17392) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00d\00\00\00\c8\00\00\00,\01\00\00\90\01")
- (data (i32.const 17428) "\01")
- (data (i32.const 17440) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00d\00\00\00\c8\00\00\00,\01\00\00\90\01")
- (data (i32.const 17472) "\18\00\00\00\01\00\00\00\00\00\00\00\18\00\00\00\fd\ff\ff\ff\04\00\00\00\00\00\00\00\fe\ff\ff\ff\06\00\00\00\ff\ff\ff\ff")
- (data (i32.const 17520) "\18\00\00\00\01\00\00\00\00\00\00\00\18\00\00\00\fd\ff\ff\ff\fe\ff\ff\ff\ff\ff\ff\ff\00\00\00\00\04\00\00\00\06")
- (data (i32.const 17568) "$\00\00\00\01\00\00\00\00\00\00\00$\00\00\00\01\00\00\00\04\00\00\00\02\00\00\00\n\00\00\00\17\00\00\00\03\00\00\00\01\00\00\00\00\00\00\00\14")
- (data (i32.const 17632) "$\00\00\00\01\00\00\00\00\00\00\00$\00\00\00\00\00\00\00\01\00\00\00\01\00\00\00\02\00\00\00\03\00\00\00\04\00\00\00\n\00\00\00\14\00\00\00\17")
- (data (i32.const 17696) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00Y")
- (data (i32.const 17728) "\12\00\00\00\01\00\00\00\01\00\00\00\12\00\00\00r\00a\00d\00i\00x\00S\00o\00r\00t")
- (data (i32.const 17776) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00d\00\00\00\c8\00\00\00,\01\00\00\90\01")
- (data (i32.const 17812) "\01")
- (data (i32.const 17824) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00d\00\00\00\c8\00\00\00,\01\00\00\90\01")
- (data (i32.const 17856) "$\00\00\00\01\00\00\00\00\00\00\00$\00\00\00\01\00\00\00\04\00\00\00\02\00\00\00\n\00\00\00\17\00\00\00\03\00\00\00\01\00\00\00\00\00\00\00\14")
- (data (i32.const 17920) "$\00\00\00\01\00\00\00\00\00\00\00$\00\00\00\00\00\00\00\01\00\00\00\01\00\00\00\02\00\00\00\03\00\00\00\04\00\00\00\n\00\00\00\14\00\00\00\17")
- (data (i32.const 17984) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00Z")
- (data (i32.const 18016) " \00\00\00\01\00\00\00\01\00\00\00 \00\00\00t\00o\00p\00o\00l\00o\00g\00i\00c\00a\00l\00 \00s\00o\00r\00t")
- (data (i32.const 18064) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00\01\00\00\00\02\00\00\00\03\00\00\00\04")
- (data (i32.const 18096) "\08\00\00\00\01\00\00\00\00\00\00\00\08\00\00\00\01\00\00\00\02")
- (data (i32.const 18128) "\08\00\00\00\01\00\00\00\00\00\00\00\08\00\00\00\01\00\00\00\03")
- (data (i32.const 18160) "\08\00\00\00\01\00\00\00\00\00\00\00\08\00\00\00\03\00\00\00\02")
- (data (i32.const 18192) "\08\00\00\00\01\00\00\00\00\00\00\00\08\00\00\00\04\00\00\00\02")
- (data (i32.const 18224) "\08\00\00\00\01\00\00\00\00\00\00\00\08\00\00\00\04\00\00\00\03")
- (data (i32.const 18260) "\01")
- (data (i32.const 18276) "\01")
- (data (i32.const 18292) "\01")
- (data (i32.const 18304) "\08\00\00\00\01\00\00\00;\00\00\00\08\00\00\00[")
- (data (i32.const 18336) "\08\00\00\00\01\00\00\00;\00\00\00\08\00\00\00\\")
+ (data (i32.const 16320) " \00\00\00\01\00\00\00\00\00\00\00 \00\00\00\02\00\00\00\05\00\00\00\06\00\00\00\t\00\00\00\0d\00\00\00\0f\00\00\00\1c\00\00\00\1e")
+ (data (i32.const 16368) " \00\00\00\01\00\00\00\00\00\00\00 \00\00\00\02\00\00\00\05\00\00\00\06\00\00\00\t\00\00\00\0d\00\00\00\0f\00\00\00\1c\00\00\00\1e")
+ (data (i32.const 16416) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00T")
+ (data (i32.const 16448) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00U")
+ (data (i32.const 16480) "$\00\00\00\01\00\00\00\01\00\00\00$\00\00\00s\00o\00r\00t\00i\00n\00g\00 \00a\00l\00g\00o\00r\00i\00t\00h\00m\00s")
+ (data (i32.const 16544) "\14\00\00\00\01\00\00\00\01\00\00\00\14\00\00\00b\00u\00b\00b\00l\00e\00S\00o\00r\00t")
+ (data (i32.const 16592) "\1c\00\00\00\01\00\00\00\00\00\00\00\1c\00\00\00\08\00\00\00\05\00\00\00\02\00\00\00\t\00\00\00\05\00\00\00\06\00\00\00\03")
+ (data (i32.const 16640) "\1c\00\00\00\01\00\00\00\00\00\00\00\1c\00\00\00\02\00\00\00\03\00\00\00\05\00\00\00\05\00\00\00\06\00\00\00\08\00\00\00\t")
+ (data (i32.const 16688) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00V")
+ (data (i32.const 16720) "\1a\00\00\00\01\00\00\00\01\00\00\00\1a\00\00\00i\00n\00s\00e\00r\00t\00i\00o\00n\00S\00o\00r\00t")
+ (data (i32.const 16768) "\1c\00\00\00\01\00\00\00\00\00\00\00\1c\00\00\00\08\00\00\00\05\00\00\00\02\00\00\00\t\00\00\00\05\00\00\00\06\00\00\00\03")
+ (data (i32.const 16816) "\1c\00\00\00\01\00\00\00\00\00\00\00\1c\00\00\00\02\00\00\00\03\00\00\00\05\00\00\00\05\00\00\00\06\00\00\00\08\00\00\00\t")
+ (data (i32.const 16864) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00W")
+ (data (i32.const 16896) "\1a\00\00\00\01\00\00\00\01\00\00\00\1a\00\00\00s\00e\00l\00e\00c\00t\00i\00o\00n\00S\00o\00r\00t")
+ (data (i32.const 16944) "\1c\00\00\00\01\00\00\00\00\00\00\00\1c\00\00\00\08\00\00\00\05\00\00\00\02\00\00\00\t\00\00\00\05\00\00\00\06\00\00\00\03")
+ (data (i32.const 16992) "\1c\00\00\00\01\00\00\00\00\00\00\00\1c\00\00\00\02\00\00\00\03\00\00\00\05\00\00\00\05\00\00\00\06\00\00\00\08\00\00\00\t")
+ (data (i32.const 17040) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00X")
+ (data (i32.const 17072) "\12\00\00\00\01\00\00\00\01\00\00\00\12\00\00\00q\00u\00i\00c\00k\00S\00o\00r\00t")
+ (data (i32.const 17120) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00d\00\00\00\c8\00\00\00,\01\00\00\90\01")
+ (data (i32.const 17152) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00d\00\00\00\c8\00\00\00,\01\00\00\90\01")
+ (data (i32.const 17184) "\18\00\00\00\01\00\00\00\00\00\00\00\18\00\00\00\fd\ff\ff\ff\04\00\00\00\00\00\00\00\fe\ff\ff\ff\06\00\00\00\ff\ff\ff\ff")
+ (data (i32.const 17232) "\18\00\00\00\01\00\00\00\00\00\00\00\18\00\00\00\fd\ff\ff\ff\fe\ff\ff\ff\ff\ff\ff\ff\00\00\00\00\04\00\00\00\06")
+ (data (i32.const 17280) "$\00\00\00\01\00\00\00\00\00\00\00$\00\00\00\01\00\00\00\04\00\00\00\02\00\00\00\n\00\00\00\17\00\00\00\03\00\00\00\01\00\00\00\00\00\00\00\14")
+ (data (i32.const 17344) "$\00\00\00\01\00\00\00\00\00\00\00$\00\00\00\00\00\00\00\01\00\00\00\01\00\00\00\02\00\00\00\03\00\00\00\04\00\00\00\n\00\00\00\14\00\00\00\17")
+ (data (i32.const 17408) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00Y")
+ (data (i32.const 17440) "\12\00\00\00\01\00\00\00\01\00\00\00\12\00\00\00m\00e\00r\00g\00e\00S\00o\00r\00t")
+ (data (i32.const 17488) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00d\00\00\00\c8\00\00\00,\01\00\00\90\01")
+ (data (i32.const 17524) "\01")
+ (data (i32.const 17536) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00d\00\00\00\c8\00\00\00,\01\00\00\90\01")
+ (data (i32.const 17568) "\18\00\00\00\01\00\00\00\00\00\00\00\18\00\00\00\fd\ff\ff\ff\04\00\00\00\00\00\00\00\fe\ff\ff\ff\06\00\00\00\ff\ff\ff\ff")
+ (data (i32.const 17616) "\18\00\00\00\01\00\00\00\00\00\00\00\18\00\00\00\fd\ff\ff\ff\fe\ff\ff\ff\ff\ff\ff\ff\00\00\00\00\04\00\00\00\06")
+ (data (i32.const 17664) "$\00\00\00\01\00\00\00\00\00\00\00$\00\00\00\01\00\00\00\04\00\00\00\02\00\00\00\n\00\00\00\17\00\00\00\03\00\00\00\01\00\00\00\00\00\00\00\14")
+ (data (i32.const 17728) "$\00\00\00\01\00\00\00\00\00\00\00$\00\00\00\00\00\00\00\01\00\00\00\01\00\00\00\02\00\00\00\03\00\00\00\04\00\00\00\n\00\00\00\14\00\00\00\17")
+ (data (i32.const 17792) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00Z")
+ (data (i32.const 17824) "\12\00\00\00\01\00\00\00\01\00\00\00\12\00\00\00r\00a\00d\00i\00x\00S\00o\00r\00t")
+ (data (i32.const 17872) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00d\00\00\00\c8\00\00\00,\01\00\00\90\01")
+ (data (i32.const 17908) "\01")
+ (data (i32.const 17920) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00d\00\00\00\c8\00\00\00,\01\00\00\90\01")
+ (data (i32.const 17952) "$\00\00\00\01\00\00\00\00\00\00\00$\00\00\00\01\00\00\00\04\00\00\00\02\00\00\00\n\00\00\00\17\00\00\00\03\00\00\00\01\00\00\00\00\00\00\00\14")
+ (data (i32.const 18016) "$\00\00\00\01\00\00\00\00\00\00\00$\00\00\00\00\00\00\00\01\00\00\00\01\00\00\00\02\00\00\00\03\00\00\00\04\00\00\00\n\00\00\00\14\00\00\00\17")
+ (data (i32.const 18080) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00[")
+ (data (i32.const 18112) " \00\00\00\01\00\00\00\01\00\00\00 \00\00\00t\00o\00p\00o\00l\00o\00g\00i\00c\00a\00l\00 \00s\00o\00r\00t")
+ (data (i32.const 18160) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00\01\00\00\00\02\00\00\00\03\00\00\00\04")
+ (data (i32.const 18192) "\08\00\00\00\01\00\00\00\00\00\00\00\08\00\00\00\01\00\00\00\02")
+ (data (i32.const 18224) "\08\00\00\00\01\00\00\00\00\00\00\00\08\00\00\00\01\00\00\00\03")
+ (data (i32.const 18256) "\08\00\00\00\01\00\00\00\00\00\00\00\08\00\00\00\03\00\00\00\02")
+ (data (i32.const 18288) "\08\00\00\00\01\00\00\00\00\00\00\00\08\00\00\00\04\00\00\00\02")
+ (data (i32.const 18320) "\08\00\00\00\01\00\00\00\00\00\00\00\08\00\00\00\04\00\00\00\03")
+ (data (i32.const 18356) "\01")
  (data (i32.const 18372) "\01")
- (data (i32.const 18384) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00\04\00\00\00\01\00\00\00\03\00\00\00\02")
- (data (i32.const 18416) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00]")
- (data (i32.const 18448) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00^")
- (data (i32.const 18480) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00_")
- (data (i32.const 18512) "\14\00\00\00\01\00\00\00\01\00\00\00\14\00\00\00~\00l\00i\00b\00/\00r\00t\00.\00t\00s")
- (data (i32.const 18560) "<\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\"\t\00\00\00\00\00\00\"A\00\00\00\00\00\00 \00\00\00\00\00\00\00\"\01\00\00\00\00\00\000\t\02\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00b\00\00\00\00\00\00\00\"A\00\00\00\00\00\00 \00\00\00\00\00\00\00 ")
- (data (i32.const 18684) " \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 ")
- (data (i32.const 18716) " \00\00\00\00\00\00\00\"A\00\00\00\00\00\00\"A\00\00\00\00\00\00\"A\00\00\00\00\00\00 ")
- (data (i32.const 18764) " ")
- (data (i32.const 18780) "0A\82\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\"A\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\"A\00\00\00\00\00\000A\82\00\00\00\00\00 \00\00\00\00\00\00\00$\n\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\"A\00\00\00\00\00\00 \00\00\00\00\00\00\00p\00\82\00\00\00\00\00(A\00\00\00\00\00\000\t\82\00\00\00\00\000A\82\00\00\00\00\000\t\12\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 ")
- (data (i32.const 19020) "\02A\00\00\00\00\00\000A\12\00\00\00\00\00 ")
+ (data (i32.const 18388) "\01")
+ (data (i32.const 18400) "\08\00\00\00\01\00\00\00;\00\00\00\08\00\00\00\\")
+ (data (i32.const 18432) "\08\00\00\00\01\00\00\00;\00\00\00\08\00\00\00]")
+ (data (i32.const 18468) "\01")
+ (data (i32.const 18480) "\10\00\00\00\01\00\00\00\00\00\00\00\10\00\00\00\04\00\00\00\01\00\00\00\03\00\00\00\02")
+ (data (i32.const 18512) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00^")
+ (data (i32.const 18544) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00_")
+ (data (i32.const 18576) "\08\00\00\00\01\00\00\00\08\00\00\00\08\00\00\00`")
+ (data (i32.const 18608) "\14\00\00\00\01\00\00\00\01\00\00\00\14\00\00\00~\00l\00i\00b\00/\00r\00t\00.\00t\00s")
+ (data (i32.const 18656) "<\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\"\t\00\00\00\00\00\00\"A\00\00\00\00\00\00 \00\00\00\00\00\00\00\"\01\00\00\00\00\00\000\t\02\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00b\00\00\00\00\00\00\00\"A\00\00\00\00\00\00 \00\00\00\00\00\00\00 ")
+ (data (i32.const 18780) " \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 ")
+ (data (i32.const 18812) " \00\00\00\00\00\00\00\"A\00\00\00\00\00\00\"A\00\00\00\00\00\00\"A\00\00\00\00\00\00 ")
+ (data (i32.const 18860) " ")
+ (data (i32.const 18876) "0A\82\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\"A\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\"A\00\00\00\00\00\000A\82\00\00\00\00\00 \00\00\00\00\00\00\00$\n\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\"A\00\00\00\00\00\00 \00\00\00\00\00\00\00p\00\82\00\00\00\00\00(A\00\00\00\00\00\000\t\82\00\00\00\00\000A\82\00\00\00\00\000\t\12\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00 ")
+ (data (i32.const 19116) "\02A\00\00\00\00\00\000A\12\00\00\00\00\00 ")
  (import "env" "abort" (func $~lib/builtins/abort (param i32 i32 i32 i32)))
  (import "rtrace" "onalloc" (func $~lib/rt/rtrace/onalloc (param i32)))
  (import "rtrace" "onincrement" (func $~lib/rt/rtrace/onincrement (param i32)))
@@ -475,8 +477,8 @@
  (import "__aspect" "pushReflectedObjectKey" (func $node_modules/@as-pect/assembly/assembly/internal/Reflect/__aspectPushReflectedObjectKey (param i32 i32)))
  (import "__aspect" "tryCall" (func $node_modules/@as-pect/assembly/assembly/internal/Expectation/tryCall (param i32) (result i32)))
  (import "rtrace" "ondecrement" (func $~lib/rt/rtrace/ondecrement (param i32)))
- (table $0 96 funcref)
- (elem (i32.const 1) $start:assembly/__tests__/as-algo.spec~anonymous|0~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|0~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|0~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|0~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|0~anonymous|4 $start:assembly/__tests__/as-algo.spec~anonymous|0~anonymous|5 $start:assembly/__tests__/as-algo.spec~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|0~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|0~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|0~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|1~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|1~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|1~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|2~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|2~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|2~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|2~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|2~anonymous|4 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|2~anonymous|5 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|3~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|3~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|3~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|3~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|3~anonymous|4 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|4~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|4~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|4~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|4 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|5~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|5~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|5~anonymous|2~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|5~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|5 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|6~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|6~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|6~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|6~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|6~anonymous|4 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|6~anonymous|5 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|6~anonymous|6 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|6 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|7~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|7~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|7 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|8~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|8~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|8 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|1~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|4 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|5 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|6~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|6 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|7 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9 $start:assembly/__tests__/as-algo.spec~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|4 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|5 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|6 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|7 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|8 $assembly/dp/getPrimes/getPrimes~anonymous|0 $assembly/dp/getPrimes/getPrimes~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|9 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|10 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|11 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|12 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|13 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|14 $start:assembly/__tests__/as-algo.spec~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|3~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|3~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|4~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|4~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|4~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|4~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|4~anonymous|4 $start:assembly/__tests__/as-algo.spec~anonymous|4~anonymous|5 $assembly/sorting/topologicalSort/getOrderedJobs~anonymous|0 $assembly/sorting/topologicalSort/getOrderedJobs~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|4~anonymous|6 $start:assembly/__tests__/as-algo.spec~anonymous|4 $start:node_modules/@as-pect/assembly/assembly/internal/noOp~anonymous|0)
+ (table $0 97 funcref)
+ (elem (i32.const 1) $start:assembly/__tests__/as-algo.spec~anonymous|0~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|0~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|0~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|0~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|0~anonymous|4 $start:assembly/__tests__/as-algo.spec~anonymous|0~anonymous|5 $start:assembly/__tests__/as-algo.spec~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|0~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|0~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|0~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|1~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|1~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|1~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|2~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|2~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|2~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|2~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|2~anonymous|4 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|2~anonymous|5 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|3~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|3~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|3~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|3~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|3~anonymous|4 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|4~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|4~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|4~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|4 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|5~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|5~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|5~anonymous|2~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|5~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|5 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|6~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|6~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|6~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|6~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|6~anonymous|4 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|6~anonymous|5 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|6~anonymous|6 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|6 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|7~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|7~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|7 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|8~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|8~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|8 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|1~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|4 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|5 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|6~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|6 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9~anonymous|7 $start:assembly/__tests__/as-algo.spec~anonymous|1~anonymous|9 $start:assembly/__tests__/as-algo.spec~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|4 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|5 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|6 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|7 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|8 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|9 $assembly/dp/getPrimes/getPrimes~anonymous|0 $assembly/dp/getPrimes/getPrimes~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|10 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|11 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|12 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|13 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|14 $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|15 $start:assembly/__tests__/as-algo.spec~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|3~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|3~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|4~anonymous|0 $start:assembly/__tests__/as-algo.spec~anonymous|4~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|4~anonymous|2 $start:assembly/__tests__/as-algo.spec~anonymous|4~anonymous|3 $start:assembly/__tests__/as-algo.spec~anonymous|4~anonymous|4 $start:assembly/__tests__/as-algo.spec~anonymous|4~anonymous|5 $assembly/sorting/topologicalSort/getOrderedJobs~anonymous|0 $assembly/sorting/topologicalSort/getOrderedJobs~anonymous|1 $start:assembly/__tests__/as-algo.spec~anonymous|4~anonymous|6 $start:assembly/__tests__/as-algo.spec~anonymous|4 $start:node_modules/@as-pect/assembly/assembly/internal/noOp~anonymous|0)
  (global $~lib/rt/tlsf/ROOT (mut i32) (i32.const 0))
  (global $~lib/rt/tlsf/collectLock (mut i32) (i32.const 0))
  (global $~argumentsLength (mut i32) (i32.const 0))
@@ -495,7 +497,7 @@
  (global $~lib/rt/pure/ROOTS (mut i32) (i32.const 0))
  (global $~lib/rt/pure/CUR (mut i32) (i32.const 0))
  (global $~lib/rt/pure/END (mut i32) (i32.const 0))
- (global $~lib/rt/__rtti_base i32 (i32.const 18560))
+ (global $~lib/rt/__rtti_base i32 (i32.const 18656))
  (export "_start" (func $~start))
  (export "memory" (memory $0))
  (export "table" (table $0))
@@ -1086,12 +1088,12 @@
    if
     unreachable
    end
-   i32.const 19056
+   i32.const 19152
    local.set $1
-   i32.const 19056
+   i32.const 19152
    i32.const 0
    i32.store
-   i32.const 20624
+   i32.const 20720
    i32.const 0
    i32.store
    loop $for-loop|0
@@ -1102,7 +1104,7 @@
      local.get $0
      i32.const 2
      i32.shl
-     i32.const 19056
+     i32.const 19152
      i32.add
      i32.const 0
      i32.store offset=4
@@ -1120,7 +1122,7 @@
        i32.add
        i32.const 2
        i32.shl
-       i32.const 19056
+       i32.const 19152
        i32.add
        i32.const 0
        i32.store offset=96
@@ -1138,13 +1140,13 @@
      br $for-loop|0
     end
    end
-   i32.const 19056
-   i32.const 20640
+   i32.const 19152
+   i32.const 20736
    memory.size
    i32.const 16
    i32.shl
    call $~lib/rt/tlsf/addMemory
-   i32.const 19056
+   i32.const 19152
    global.set $~lib/rt/tlsf/ROOT
   end
   local.get $1
@@ -1530,7 +1532,7 @@
   (local $1 i32)
   (local $2 i32)
   local.get $0
-  i32.const 19044
+  i32.const 19140
   i32.gt_u
   if
    local.get $0
@@ -1579,7 +1581,7 @@
  )
  (func $~lib/rt/pure/__release (param $0 i32)
   local.get $0
-  i32.const 19044
+  i32.const 19140
   i32.gt_u
   if
    local.get $0
@@ -2011,7 +2013,7 @@
   local.get $2
   call $~lib/memory/memory.copy
   local.get $1
-  i32.const 19044
+  i32.const 19140
   i32.ge_u
   if
    local.get $1
@@ -6729,7 +6731,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 187
+   i32.const 188
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -6747,7 +6749,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 188
+   i32.const 189
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -6784,7 +6786,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 192
+   i32.const 193
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -6802,7 +6804,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 193
+   i32.const 194
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -6988,7 +6990,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 209
+   i32.const 210
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -7006,7 +7008,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 210
+   i32.const 211
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -7024,7 +7026,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 211
+   i32.const 212
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -7381,7 +7383,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 222
+   i32.const 223
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -7399,7 +7401,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 223
+   i32.const 224
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -7419,7 +7421,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 224
+   i32.const 225
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -7438,7 +7440,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 225
+   i32.const 226
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -7550,7 +7552,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 230
+   i32.const 231
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -7575,7 +7577,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 232
+   i32.const 233
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -7879,7 +7881,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 237
+   i32.const 238
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -7894,7 +7896,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 238
+   i32.const 239
    i32.const 33
    call $~lib/builtins/abort
    unreachable
@@ -7941,7 +7943,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 240
+   i32.const 241
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -7998,7 +8000,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 249
+   i32.const 250
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -8025,7 +8027,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 252
+   i32.const 253
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -8207,7 +8209,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 257
+   i32.const 258
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -8225,7 +8227,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 258
+   i32.const 259
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -8243,7 +8245,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 259
+   i32.const 260
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -8261,7 +8263,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 260
+   i32.const 261
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -8373,7 +8375,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 266
+   i32.const 267
    i32.const 7
    call $~lib/builtins/abort
    unreachable
@@ -8416,7 +8418,7 @@
     if
      i32.const 5488
      i32.const 5536
-     i32.const 269
+     i32.const 270
      i32.const 7
      call $~lib/builtins/abort
      unreachable
@@ -8502,14 +8504,14 @@
    end
    i32.const 5488
    i32.const 5536
-   i32.const 267
+   i32.const 268
    i32.const 7
    call $~lib/builtins/abort
    unreachable
   end
   i32.const 5488
   i32.const 5536
-  i32.const 270
+  i32.const 271
   i32.const 7
   call $~lib/builtins/abort
   unreachable
@@ -8925,7 +8927,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 288
+   i32.const 289
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -8943,7 +8945,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 289
+   i32.const 290
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -8963,7 +8965,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 290
+   i32.const 291
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -8982,7 +8984,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 291
+   i32.const 292
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -9057,7 +9059,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 296
+   i32.const 297
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -9082,7 +9084,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 298
+   i32.const 299
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -9472,7 +9474,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 303
+   i32.const 304
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -9487,7 +9489,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 305
+   i32.const 306
    i32.const 10
    call $~lib/builtins/abort
    unreachable
@@ -9578,7 +9580,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 308
+   i32.const 309
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -9720,7 +9722,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 317
+   i32.const 318
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -9747,7 +9749,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 320
+   i32.const 321
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -9923,7 +9925,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 325
+   i32.const 326
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -9941,7 +9943,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 326
+   i32.const 327
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -9959,7 +9961,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 327
+   i32.const 328
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -9977,7 +9979,7 @@
   if
    i32.const 5488
    i32.const 5536
-   i32.const 328
+   i32.const 329
    i32.const 15
    call $~lib/builtins/abort
    unreachable
@@ -19092,6 +19094,98 @@
   local.get $7
   call $~lib/rt/pure/__release
  )
+ (func $assembly/dp/fib/fib (param $0 i32) (result i32)
+  local.get $0
+  i32.const 1
+  i32.le_s
+  if
+   local.get $0
+   return
+  end
+  local.get $0
+  i32.const 1
+  i32.sub
+  call $assembly/dp/fib/fib
+  local.get $0
+  i32.const 2
+  i32.sub
+  call $assembly/dp/fib/fib
+  i32.add
+ )
+ (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|6
+  (local $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  i32.const 0
+  call $assembly/dp/fib/fib
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/expect<i32>
+  local.tee $0
+  i32.const 0
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<i32>#toBe
+  i32.const 1
+  call $assembly/dp/fib/fib
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/expect<i32>
+  local.tee $1
+  i32.const 1
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<i32>#toBe
+  i32.const 2
+  call $assembly/dp/fib/fib
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/expect<i32>
+  local.tee $2
+  i32.const 1
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<i32>#toBe
+  i32.const 3
+  call $assembly/dp/fib/fib
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/expect<i32>
+  local.tee $3
+  i32.const 2
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<i32>#toBe
+  i32.const 4
+  call $assembly/dp/fib/fib
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/expect<i32>
+  local.tee $4
+  i32.const 3
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<i32>#toBe
+  i32.const 5
+  call $assembly/dp/fib/fib
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/expect<i32>
+  local.tee $5
+  i32.const 5
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<i32>#toBe
+  i32.const 6
+  call $assembly/dp/fib/fib
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/expect<i32>
+  local.tee $6
+  i32.const 8
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<i32>#toBe
+  i32.const 7
+  call $assembly/dp/fib/fib
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/expect<i32>
+  local.tee $7
+  i32.const 13
+  call $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<i32>#toBe
+  local.get $0
+  call $~lib/rt/pure/__release
+  local.get $1
+  call $~lib/rt/pure/__release
+  local.get $2
+  call $~lib/rt/pure/__release
+  local.get $3
+  call $~lib/rt/pure/__release
+  local.get $4
+  call $~lib/rt/pure/__release
+  local.get $5
+  call $~lib/rt/pure/__release
+  local.get $6
+  call $~lib/rt/pure/__release
+  local.get $7
+  call $~lib/rt/pure/__release
+ )
  (func $assembly/dp/fib/fibIter (param $0 i32) (result i32)
   (local $1 i32)
   (local $2 i32)
@@ -19122,7 +19216,7 @@
   end
   i32.const 0
  )
- (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|6
+ (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|7
   (local $0 i32)
   (local $1 i32)
   (local $2 i32)
@@ -19263,7 +19357,7 @@
   local.get $4
   call $~lib/rt/pure/__release
  )
- (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|7
+ (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|8
   (local $0 i32)
   (local $1 i32)
   (local $2 i32)
@@ -20400,7 +20494,7 @@
   f64.add
   i32.trunc_f64_s
  )
- (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|8
+ (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|9
   (local $0 i32)
   (local $1 i32)
   (local $2 i32)
@@ -20668,7 +20762,7 @@
     local.get $2
     local.get $6
     local.get $1
-    i32.const 14464
+    i32.const 14560
     i32.load
     call_indirect (type $i32_i32_i32_=>_i32)
     i32.store
@@ -20679,7 +20773,7 @@
     br $for-loop|00
    end
   end
-  i32.const 14464
+  i32.const 14560
   call $~lib/rt/pure/__release
   local.get $0
   local.set $2
@@ -20718,7 +20812,7 @@
     local.get $3
     local.get $4
     local.get $2
-    i32.const 14496
+    i32.const 14592
     i32.load
     call_indirect (type $i32_i32_i32_=>_i32)
     if
@@ -20733,7 +20827,7 @@
     br $for-loop|01
    end
   end
-  i32.const 14496
+  i32.const 14592
   call $~lib/rt/pure/__release
   local.get $1
   call $~lib/rt/pure/__release
@@ -20741,7 +20835,7 @@
   call $~lib/rt/pure/__release
   local.get $7
  )
- (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|9
+ (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|10
   (local $0 i32)
   (local $1 i32)
   (local $2 i32)
@@ -20759,7 +20853,7 @@
   i32.const 3
   i32.const 2
   i32.const 3
-  i32.const 14528
+  i32.const 14624
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $2
@@ -20772,7 +20866,7 @@
   i32.const 8
   i32.const 2
   i32.const 3
-  i32.const 14560
+  i32.const 14656
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $5
@@ -20785,7 +20879,7 @@
   i32.const 15
   i32.const 2
   i32.const 3
-  i32.const 14608
+  i32.const 14704
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $8
@@ -20809,7 +20903,7 @@
   local.get $8
   call $~lib/rt/pure/__release
  )
- (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|10
+ (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|11
   (local $0 i32)
   (local $1 i32)
   (local $2 i32)
@@ -20905,7 +20999,7 @@
   call $assembly/dp/pascalsTriangle/pascalsTriangle
   i32.add
  )
- (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|11
+ (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|12
   (local $0 i32)
   (local $1 i32)
   (local $2 i32)
@@ -20947,7 +21041,7 @@
   i32.const 0
   i32.const 2
   i32.const 4
-  i32.const 15056
+  i32.const 15152
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.set $3
@@ -20959,7 +21053,7 @@
     i32.const 0
     i32.const 2
     i32.const 3
-    i32.const 15072
+    i32.const 15168
     call $~lib/rt/__allocArray
     call $~lib/rt/pure/__retain
     local.set $4
@@ -21027,7 +21121,7 @@
   end
   local.get $3
  )
- (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|12
+ (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|13
   (local $0 i32)
   (local $1 i32)
   (local $2 i32)
@@ -21054,7 +21148,7 @@
   i32.const 1
   i32.const 2
   i32.const 3
-  i32.const 15088
+  i32.const 15184
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   i32.store
@@ -21078,7 +21172,7 @@
   i32.const 1
   i32.const 2
   i32.const 3
-  i32.const 15120
+  i32.const 15216
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   i32.store
@@ -21086,7 +21180,7 @@
   i32.const 2
   i32.const 2
   i32.const 3
-  i32.const 15152
+  i32.const 15248
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   i32.store offset=4
@@ -21110,7 +21204,7 @@
   i32.const 1
   i32.const 2
   i32.const 3
-  i32.const 15184
+  i32.const 15280
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   i32.store
@@ -21118,7 +21212,7 @@
   i32.const 2
   i32.const 2
   i32.const 3
-  i32.const 15216
+  i32.const 15312
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   i32.store offset=4
@@ -21126,7 +21220,7 @@
   i32.const 3
   i32.const 2
   i32.const 3
-  i32.const 15248
+  i32.const 15344
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   i32.store offset=8
@@ -21159,7 +21253,7 @@
   i32.const 1
   i32.const 2
   i32.const 3
-  i32.const 15376
+  i32.const 15472
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.set $3
@@ -21215,7 +21309,7 @@
   end
   local.get $3
  )
- (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|13
+ (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|14
   (local $0 i32)
   (local $1 i32)
   (local $2 i32)
@@ -21236,7 +21330,7 @@
   i32.const 1
   i32.const 2
   i32.const 3
-  i32.const 15408
+  i32.const 15504
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $2
@@ -21249,7 +21343,7 @@
   i32.const 2
   i32.const 2
   i32.const 3
-  i32.const 15440
+  i32.const 15536
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $5
@@ -21262,7 +21356,7 @@
   i32.const 3
   i32.const 2
   i32.const 3
-  i32.const 15472
+  i32.const 15568
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $8
@@ -21275,7 +21369,7 @@
   i32.const 4
   i32.const 2
   i32.const 3
-  i32.const 15504
+  i32.const 15600
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $11
@@ -21601,7 +21695,7 @@
   i32.const 0
   i32.const 8
   i32.const 8
-  i32.const 15648
+  i32.const 15744
   local.get $0
   call $node_modules/@as-pect/assembly/assembly/internal/Reflect/createReflectedNumber
   local.set $3
@@ -21650,7 +21744,7 @@
   i32.const 2304
   call $~lib/rt/pure/__release
  )
- (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|14
+ (func $start:assembly/__tests__/as-algo.spec~anonymous|2~anonymous|15
   (local $0 i32)
   (local $1 i32)
   (local $2 i32)
@@ -21715,33 +21809,36 @@
   i32.const 14160
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
   i32.const 14192
-  i32.const 14288
+  i32.const 14256
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
-  i32.const 14320
+  i32.const 14288
   i32.const 14384
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
   i32.const 14416
-  i32.const 14688
+  i32.const 14480
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
-  i32.const 14720
-  i32.const 14848
+  i32.const 14512
+  i32.const 14784
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
-  i32.const 14880
+  i32.const 14816
   i32.const 14944
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
   i32.const 14976
-  i32.const 15280
+  i32.const 15040
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
-  i32.const 15312
-  i32.const 15536
+  i32.const 15072
+  i32.const 15376
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
-  i32.const 15568
-  i32.const 15680
+  i32.const 15408
+  i32.const 15632
+  call $node_modules/@as-pect/assembly/assembly/internal/Test/test
+  i32.const 15664
+  i32.const 15776
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
  )
  (func $~lib/string/String#slice (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
-  i32.const 15888
+  i32.const 15984
   call $~lib/string/String#get:length
   local.set $2
   local.get $0
@@ -21806,7 +21903,7 @@
   local.get $0
   i32.const 1
   i32.shl
-  i32.const 15888
+  i32.const 15984
   i32.add
   local.get $1
   call $~lib/memory/memory.copy
@@ -21822,7 +21919,7 @@
   local.get $0
   call $~lib/rt/pure/__retain
   local.set $2
-  i32.const 15888
+  i32.const 15984
   call $~lib/string/String#get:length
   local.set $4
   local.get $2
@@ -21858,7 +21955,7 @@
     br $while-continue|0
    end
   end
-  i32.const 15888
+  i32.const 15984
   call $~lib/rt/pure/__release
   local.get $2
   call $~lib/rt/pure/__release
@@ -21868,19 +21965,19 @@
   (local $0 i32)
   (local $1 i32)
   (local $2 i32)
-  i32.const 15968
+  i32.const 16064
   call $assembly/search/knuthMorrisPratt/kmpSearch
   call $node_modules/@as-pect/assembly/assembly/internal/Expectation/expect<i32>
   local.tee $0
   i32.const 2
   call $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<i32>#toBe
-  i32.const 16000
+  i32.const 16096
   call $assembly/search/knuthMorrisPratt/kmpSearch
   call $node_modules/@as-pect/assembly/assembly/internal/Expectation/expect<i32>
   local.tee $1
   i32.const 0
   call $node_modules/@as-pect/assembly/assembly/internal/Expectation/Expectation<i32>#toBe
-  i32.const 16032
+  i32.const 16128
   call $assembly/search/knuthMorrisPratt/kmpSearch
   call $node_modules/@as-pect/assembly/assembly/internal/Expectation/expect<i32>
   local.tee $2
@@ -21973,7 +22070,7 @@
   i32.const 5
   i32.const 2
   i32.const 3
-  i32.const 16144
+  i32.const 16240
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $0
@@ -21986,7 +22083,7 @@
   i32.const 8
   i32.const 2
   i32.const 3
-  i32.const 16192
+  i32.const 16288
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $2
@@ -21999,7 +22096,7 @@
   i32.const 8
   i32.const 2
   i32.const 3
-  i32.const 16240
+  i32.const 16336
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $4
@@ -22012,7 +22109,7 @@
   i32.const 8
   i32.const 2
   i32.const 3
-  i32.const 16288
+  i32.const 16384
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $6
@@ -22040,11 +22137,11 @@
   call $~lib/rt/pure/__release
  )
  (func $start:assembly/__tests__/as-algo.spec~anonymous|3
-  i32.const 15808
-  i32.const 16064
+  i32.const 15904
+  i32.const 16160
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
-  i32.const 16096
-  i32.const 16336
+  i32.const 16192
+  i32.const 16432
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
  )
  (func $assembly/sorting/bubbleSort/swap (param $0 i32) (param $1 i32) (param $2 i32)
@@ -22077,7 +22174,7 @@
   i32.const 7
   i32.const 2
   i32.const 3
-  i32.const 16512
+  i32.const 16608
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $4
@@ -22140,7 +22237,7 @@
   i32.const 7
   i32.const 2
   i32.const 3
-  i32.const 16560
+  i32.const 16656
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $0
@@ -22162,7 +22259,7 @@
   i32.const 7
   i32.const 2
   i32.const 3
-  i32.const 16688
+  i32.const 16784
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $3
@@ -22219,7 +22316,7 @@
   i32.const 7
   i32.const 2
   i32.const 3
-  i32.const 16736
+  i32.const 16832
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $1
@@ -22242,7 +22339,7 @@
   i32.const 7
   i32.const 2
   i32.const 3
-  i32.const 16864
+  i32.const 16960
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $4
@@ -22301,7 +22398,7 @@
   i32.const 7
   i32.const 2
   i32.const 3
-  i32.const 16912
+  i32.const 17008
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $2
@@ -22430,7 +22527,7 @@
   i32.const 4
   i32.const 2
   i32.const 3
-  i32.const 17040
+  i32.const 17136
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.set $0
@@ -22444,7 +22541,7 @@
   i32.const 4
   i32.const 2
   i32.const 3
-  i32.const 17072
+  i32.const 17168
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $5
@@ -22452,7 +22549,7 @@
   i32.const 6
   i32.const 2
   i32.const 3
-  i32.const 17104
+  i32.const 17200
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.set $1
@@ -22466,7 +22563,7 @@
   i32.const 6
   i32.const 2
   i32.const 3
-  i32.const 17152
+  i32.const 17248
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $8
@@ -22474,7 +22571,7 @@
   i32.const 9
   i32.const 2
   i32.const 3
-  i32.const 17200
+  i32.const 17296
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.set $2
@@ -22488,7 +22585,7 @@
   i32.const 9
   i32.const 2
   i32.const 3
-  i32.const 17264
+  i32.const 17360
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $11
@@ -22533,7 +22630,7 @@
   i32.const 0
   i32.const 2
   i32.const 3
-  i32.const 17440
+  i32.const 17536
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.set $4
@@ -22689,7 +22786,7 @@
   i32.const 4
   i32.const 2
   i32.const 3
-  i32.const 17408
+  i32.const 17504
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $0
@@ -22700,7 +22797,7 @@
   i32.const 4
   i32.const 2
   i32.const 3
-  i32.const 17456
+  i32.const 17552
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $3
@@ -22708,7 +22805,7 @@
   i32.const 6
   i32.const 2
   i32.const 3
-  i32.const 17488
+  i32.const 17584
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $4
@@ -22719,7 +22816,7 @@
   i32.const 6
   i32.const 2
   i32.const 3
-  i32.const 17536
+  i32.const 17632
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $7
@@ -22727,7 +22824,7 @@
   i32.const 9
   i32.const 2
   i32.const 3
-  i32.const 17584
+  i32.const 17680
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $8
@@ -22738,7 +22835,7 @@
   i32.const 9
   i32.const 2
   i32.const 3
-  i32.const 17648
+  i32.const 17744
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $11
@@ -23195,7 +23292,7 @@
       i32.const 0
       i32.const 2
       i32.const 3
-      i32.const 17824
+      i32.const 17920
       call $~lib/rt/__allocArray
       call $~lib/rt/pure/__retain
       local.tee $3
@@ -23275,7 +23372,7 @@
   i32.const 4
   i32.const 2
   i32.const 3
-  i32.const 17792
+  i32.const 17888
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $0
@@ -23286,7 +23383,7 @@
   i32.const 4
   i32.const 2
   i32.const 3
-  i32.const 17840
+  i32.const 17936
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $3
@@ -23294,7 +23391,7 @@
   i32.const 9
   i32.const 2
   i32.const 3
-  i32.const 17872
+  i32.const 17968
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $4
@@ -23305,7 +23402,7 @@
   i32.const 9
   i32.const 2
   i32.const 3
-  i32.const 17936
+  i32.const 18032
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $7
@@ -23474,7 +23571,7 @@
   i32.const 0
   i32.const 2
   i32.const 57
-  i32.const 18272
+  i32.const 18368
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   i32.store offset=4
@@ -23537,7 +23634,7 @@
   i32.const 0
   i32.const 2
   i32.const 57
-  i32.const 18288
+  i32.const 18384
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   i32.store
@@ -23693,7 +23790,7 @@
   i32.const 0
   i32.const 2
   i32.const 3
-  i32.const 18304
+  i32.const 18400
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.set $7
@@ -23736,7 +23833,7 @@
     local.get $3
     local.get $1
     local.get $2
-    i32.const 18320
+    i32.const 18416
     i32.load
     call_indirect (type $i32_i32_i32_=>_i32)
     if
@@ -23753,7 +23850,7 @@
     br $for-loop|0
    end
   end
-  i32.const 18320
+  i32.const 18416
   call $~lib/rt/pure/__release
   loop $while-continue|0
    local.get $0
@@ -23838,11 +23935,11 @@
      global.set $~argumentsLength
      local.get $1
      local.get $2
-     i32.const 18352
+     i32.const 18448
      i32.load
      call_indirect (type $i32_i32_i32_=>_i32)
      if
-      i32.const 18352
+      i32.const 18448
       call $~lib/rt/pure/__release
       i32.const 1
       br $__inlined_func$~lib/array/Array<assembly/sorting/topologicalSort/JobNode>#some
@@ -23854,7 +23951,7 @@
      br $for-loop|00
     end
    end
-   i32.const 18352
+   i32.const 18448
    call $~lib/rt/pure/__release
    i32.const 0
   end
@@ -23862,7 +23959,7 @@
    i32.const 0
    i32.const 2
    i32.const 3
-   i32.const 18384
+   i32.const 18480
    call $~lib/rt/__allocArray
    call $~lib/rt/pure/__retain
   else
@@ -23886,7 +23983,7 @@
   i32.const 4
   i32.const 2
   i32.const 3
-  i32.const 18080
+  i32.const 18176
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.set $4
@@ -23902,7 +23999,7 @@
   i32.const 2
   i32.const 2
   i32.const 3
-  i32.const 18112
+  i32.const 18208
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   i32.store
@@ -23910,7 +24007,7 @@
   i32.const 2
   i32.const 2
   i32.const 3
-  i32.const 18144
+  i32.const 18240
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   i32.store offset=4
@@ -23918,7 +24015,7 @@
   i32.const 2
   i32.const 2
   i32.const 3
-  i32.const 18176
+  i32.const 18272
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   i32.store offset=8
@@ -23926,7 +24023,7 @@
   i32.const 2
   i32.const 2
   i32.const 3
-  i32.const 18208
+  i32.const 18304
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   i32.store offset=12
@@ -23934,7 +24031,7 @@
   i32.const 2
   i32.const 2
   i32.const 3
-  i32.const 18240
+  i32.const 18336
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   i32.store offset=16
@@ -23959,7 +24056,7 @@
   i32.const 4
   i32.const 2
   i32.const 3
-  i32.const 18400
+  i32.const 18496
   call $~lib/rt/__allocArray
   call $~lib/rt/pure/__retain
   local.tee $3
@@ -23976,26 +24073,26 @@
   call $~lib/rt/pure/__release
  )
  (func $start:assembly/__tests__/as-algo.spec~anonymous|4
-  i32.const 16464
-  i32.const 16608
+  i32.const 16560
+  i32.const 16704
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
-  i32.const 16640
-  i32.const 16784
+  i32.const 16736
+  i32.const 16880
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
-  i32.const 16816
-  i32.const 16960
+  i32.const 16912
+  i32.const 17056
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
-  i32.const 16992
-  i32.const 17328
+  i32.const 17088
+  i32.const 17424
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
-  i32.const 17360
-  i32.const 17712
+  i32.const 17456
+  i32.const 17808
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
-  i32.const 17744
-  i32.const 18000
+  i32.const 17840
+  i32.const 18096
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
-  i32.const 18032
-  i32.const 18432
+  i32.const 18128
+  i32.const 18528
   call $node_modules/@as-pect/assembly/assembly/internal/Test/test
  )
  (func $start:assembly/__tests__/as-algo.spec
@@ -24155,13 +24252,13 @@
   i32.const 12944
   call $node_modules/@as-pect/assembly/assembly/internal/Test/describe
   i32.const 12976
-  i32.const 15712
+  i32.const 15808
   call $node_modules/@as-pect/assembly/assembly/internal/Test/describe
-  i32.const 15744
-  i32.const 16368
+  i32.const 15840
+  i32.const 16464
   call $node_modules/@as-pect/assembly/assembly/internal/Test/describe
-  i32.const 16400
-  i32.const 18464
+  i32.const 16496
+  i32.const 18560
   call $node_modules/@as-pect/assembly/assembly/internal/Test/describe
  )
  (func $start:node_modules/@as-pect/assembly/assembly/internal/noOp~anonymous|0
@@ -24477,12 +24574,12 @@
    local.get $0
    i32.load offset=8
    local.tee $3
-   i32.const 18560
+   i32.const 18656
    i32.load
    i32.gt_u
    if
     i32.const 1440
-    i32.const 18528
+    i32.const 18624
     i32.const 22
     i32.const 28
     call $~lib/builtins/abort
@@ -24491,7 +24588,7 @@
    local.get $3
    i32.const 3
    i32.shl
-   i32.const 18564
+   i32.const 18660
    i32.add
    i32.load
    i32.const 32
@@ -24585,7 +24682,7 @@
  )
  (func $~lib/rt/pure/__visit (param $0 i32) (param $1 i32)
   local.get $0
-  i32.const 19044
+  i32.const 19140
   i32.lt_u
   if
    return

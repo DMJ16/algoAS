@@ -9,10 +9,12 @@
     "asbuild:untouched": "asc assembly/index.as.ts --target debug",
     "asbuild:optimized": "asc assembly/index.as.ts --target release",
     "asbuild:wasi": "asc assembly/index.as.ts -b build/as-algo.wasm -t build/as-algo.wat --runtime half",
+    "asbuild:gameOfLife": "asc assembly/web/gameOfLife.as.ts -b build/gameOfLife.wasm -t build/gameOfLife.wat -d build/gameOfLife.d.ts --use Math=JSMath -O3 --runtime full --importMemory --sourceMap --measure",
     "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized && npm run asbuild:wasi",
     "wasmtime": "wasmtime --dir . build/as-algo.wasm",
     "wasi": "npm run asbuild:wasi && npm run wasmtime",
-    "asbuild:watch": "onchange -i 'assembly/**/*' -- npm run start"
+    "asbuild:watch": "onchange -i 'assembly/**/*' -- npm run start",
+    "start": "npx http-server . -o -c-1"
   },
   "repository": {
     "type": "git",
@@ -23,10 +25,14 @@
     "webassembly",
     "WASI",
     "algorithms",
-    "data structures"
+    "data structures",
+    "web development"
   ],
   "author": "david josephs",
   "license": "ISC",
+  "browserslist": [
+    "last 1 Chrome version"
+  ],
   "dependencies": {
     "@assemblyscript/loader": "^0.14.11",
     "as-bignum": "^0.2.4",
@@ -39,6 +45,7 @@
     "@as-pect/cli": "^4.0.0",
     "@assemblyscript/node": "github:AssemblyScript/node",
     "@types/node": "^14.11.1",
+    "http-server": "^0.12.3",
     "onchange": "^7.0.2"
   }
 }

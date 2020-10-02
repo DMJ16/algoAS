@@ -26,6 +26,7 @@ import {
   kadanesAlgo,
   climbStairs,
   climbStairsMemo,
+  fib,
   fibIter,
   fibMemo,
   fibExp,
@@ -514,7 +515,6 @@ describe("data structures", () => {
       graph.addVertex("D");
       graph.addVertex("E");
       expect(graph.addVertex("F")).toBe(6);
-      // expect(graph.adjList.keys().length).toBe(6);
     });
 
     test("add edges", () => {
@@ -665,6 +665,17 @@ describe("dynamic programming", () => {
     expect(factorialIter(4)).toBe(24);
     expect(factorialIter(5)).toBe(120);
     expect(factorialIter(6)).toBe(720);
+  });
+
+  test("get nth fib recursive", () => {
+    expect(fib(0)).toBe(0);
+    expect(fib(1)).toBe(1);
+    expect(fib(2)).toBe(1);
+    expect(fib(3)).toBe(2);
+    expect(fib(4)).toBe(3);
+    expect(fib(5)).toBe(5);
+    expect(fib(6)).toBe(8);
+    expect(fib(7)).toBe(13);
   });
 
   test("get nth fib iterative", () => {

@@ -1,6 +1,6 @@
 export { climbStairs, climbStairsMemo } from "./climbStairs";
 export { factorialRecursive, factorialIter } from "./factorial";
-export { fibIter, fibMemo, fibExp } from "./fib";
+export { fib, fibIter, fibMemo, fibExp } from "./fib";
 export { getPrimes } from "./getPrimes";
 export { isAnagram } from "./isAnagram";
 export { kadanesAlgo } from "./kadanesAlgo";
