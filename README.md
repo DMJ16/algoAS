@@ -32,21 +32,18 @@ Reimplementation of the official AssemblyScript example ([AS Demo](https://www.a
 
 #### Instructions
 
-```
+```javascript
 // install dependencies
-
 npm install
 ```
 
-```
+```javascript
 // build game of life wasm module and .wat representation
-
 npm run asbuild:gameOfLife
 ```
 
-```
+```javascript
 // start a local server
-
 npm start
 ```
 
