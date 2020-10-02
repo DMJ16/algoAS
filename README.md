@@ -50,4 +50,4 @@ npm run asbuild:gameOfLife
 npm start
 ```
 
-<img src="https://media.giphy.com/media/ZRxA40j4IhQyo21uFM/giphy.gif"/>
+![](https://media.giphy.com/media/SAaFFgKsyWSx0dFkXj/giphy.gif)
