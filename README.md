@@ -1,32 +1,32 @@
-# as-algo 🚀
+# 🚀 as-algo 
 
 ![CircleCI](https://img.shields.io/circleci/build/github/DMJ16/as-algo?style=plastic)
 
-## Summary 📖
+## 📖 Summary
 
 Algorithms, data structures, and general computer science problems in AssemblyScript.
 
-## Technology and Tools 🧰
+## 🧰 Technology and Tools 
 
 AssemblyScript + as-wasi + wasmtime + as-pect
 
-## Tests 🧪
+## 🧪 Tests
 
 Test suites written in as-pect, which brings Jest and ts-jest to AssemblyScript.
 
-## WASI 🧩
+## 🧩 WASI
 
-### Mandelbrot
+### 🧮 Mandelbrot
 
 ![](https://media.giphy.com/media/ifNKKnRWnSmLRMPdby/giphy.gif)
 
-### Matrix Spiral Traversal
+### 🌀 Matrix Spiral Traversal
 
 ![](https://media.giphy.com/media/izSfqealbmnmaJJaHG/giphy.gif)
 
-## Web 🌐
+## 🌐 Web
 
-### Conway's Game of Life 👾
+### 👾 Conway's Game of Life
 
 Reimplementation of the official AssemblyScript example ([AS Demo](https://www.assemblyscript.org/examples/game-of-life.html#example)).
 
